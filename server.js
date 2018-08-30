@@ -3,12 +3,13 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var Spotify = require("node-spotify-api");
-var keys = require("./keys.js");
-
+//initialize the spotify api with the keys 
+var spotify = new Spotify(keys.spotify);
+var keys = require("./public/js/keys.js");
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8889;
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
