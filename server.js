@@ -3,7 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var db = require("./models");
-
+require("./public/js/spotifySearch.js");
 
 var app = express();
 var PORT = process.env.PORT || 8889;
