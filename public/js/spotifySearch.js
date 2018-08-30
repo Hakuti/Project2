@@ -1,3 +1,9 @@
+
+var Spotify = require("node-spotify-api");
+//initialize the spotify api with the keys 
+var spotify = new Spotify(keys.spotify);
+var keys = require("./public/js/keys.js");
+
 var mySpotify = function(songName){
     //if user did not enter a song name default to "The Sign"
     if(songName === undefined){
@@ -27,3 +33,7 @@ var mySpotify = function(songName){
         }
     });  
 }
+
+$("#search").on("click", function(){
+    mySpotify("505");
+})
