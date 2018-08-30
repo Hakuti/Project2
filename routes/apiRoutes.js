@@ -1,6 +1,12 @@
 var db = require("../models");
+var myspotify = require("../public/js/spotifySearch.js");
 
 module.exports = function(app) {
+  app.get("/",function(req,res){
+    myspotify.mySpotify("chance the rapper");
+  })
+
+
   // Get all examples
   app.get("/api/examples", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
