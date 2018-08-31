@@ -2,10 +2,10 @@ var db = require("../models");
 var myspotify = require("../public/js/spotifySearch.js");
 
 module.exports = function(app) {
-  app.get("/",function(req,res){
-    myspotify.mySpotify("chance the rapper");
-  })
-
+  app.get("/api/:genre", function(req, res) {
+    db.artists.findAll({}).then(result => console.log(result[1].artist_name));
+    //myspotify.mySpotify("chance the rapper");
+  });
 
   // Get all examples
   app.get("/api/examples", function(req, res) {
@@ -23,7 +23,9 @@ module.exports = function(app) {
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Example.destroy({ where: { id: req.params.id } }).then(function(
+      dbExample
+    ) {
       res.json(dbExample);
     });
   });

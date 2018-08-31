@@ -23,7 +23,7 @@
 # Dump of table artists
 # ------------------------------------------------------------
 
-DROP TABLE IF EXISTS `artists`;
+/* DROP TABLE IF EXISTS `artists`;
 
 CREATE TABLE `artists` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
@@ -33,7 +33,7 @@ CREATE TABLE `artists` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `artists` WRITE;
-/*!40000 ALTER TABLE `artists` DISABLE KEYS */;
+!40000 ALTER TABLE `artists` DISABLE KEYS ; */
 
 INSERT INTO `artists` (`artist_name`, `genre`)
 VALUES
@@ -2467,7 +2467,7 @@ VALUES
 	('Crazy Town ','Rock');
 
 /*!40000 ALTER TABLE `artists` ENABLE KEYS */;
-UNLOCK TABLES;
+/* UNLOCK TABLES; */
 
 
 
