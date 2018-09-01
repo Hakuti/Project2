@@ -22,12 +22,11 @@ module.exports = function(app) {
   });
 
   // query spotify for all the artists related to selected genre
-  app.get("/api/:genre", function(req, res) {
-    var selected = req.params.genre;
+  app.get("/api", function(req, res) {
     db.artists.findAll({
-      where: {genre: selected}
-    }).then(function(results) {
-      res.json(results);
+      where: {genre: "Rap"}
+    }).then(function(dbartists) {
+      res.json(dbartists);
     })
   });
 };

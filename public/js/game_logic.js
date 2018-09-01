@@ -2,7 +2,7 @@
 //jquery grab drop menu genre selection then ajax 
 var genre = $(id_dropdown).val();
 
-$.ajax("/api/:genre", {
-    type:"GET",
-    data: realated_artists
-})
+//make an ajax call to spotify for each of the artists in the selected genre
+$.get("/api/:genre", function(data, status){
+    console.log("Data: " + data + "\nStatus: " + status);
+});

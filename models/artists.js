@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var testdb = sequelize.define(
+  var top_artists = sequelize.define(
     "artists",
     {
       artist_name: DataTypes.STRING,
@@ -9,5 +9,5 @@ module.exports = function(sequelize, DataTypes) {
       timestamps: false
     }
   );
-  return testdb;
+  return top_artists;
 };
