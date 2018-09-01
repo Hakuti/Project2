@@ -1,10 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "pwnage123",
-    "database": "testdb",
+    "password": "root",
+    "database": "top_artists",
     "host": "localhost",
-    "port": 3306,
+    "port": 8889,
     "dialect": "mysql"
   },
   "test": {
