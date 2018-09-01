@@ -24,9 +24,15 @@ module.exports = function(app) {
   // query spotify for all the artists related to selected genre
   app.get("/api", function(req, res) {
     db.artists.findAll({
-      where: {genre: "Rap"}
+      where: {genre: "Pop"}
     }).then(function(dbartists) {
       res.json(dbartists);
+
+      //need to loop over dbartists and grab the artists' names then query spotify
+      //for each and grab the song preview, album art for each
+      for(var i =0; i < dbartists.length; i++){
+        myspotify.mySpotify(dbartists[i].artist_name);
+      }
     })
   });
 };
