@@ -21,12 +21,13 @@ module.exports = function(app) {
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
-    });
+  // query spotify for all the artists related to selected genre
+  app.get("/api/:genre", function(req, res) {
+    var selected = req.params.genre;
+    db.artists.findAll({
+      where: {genre: selected}
+    }).then(function(results) {
+      res.json(results);
+    })
   });
 };
