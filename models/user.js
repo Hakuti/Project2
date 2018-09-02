@@ -5,7 +5,7 @@ var bcrypt = require("bcrypt-nodejs");
 module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // The gamer_tag cannot be null, and must be a proper gamer_tag before creation
-    gamer_tag: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
