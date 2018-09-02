@@ -40,10 +40,10 @@
       .from(loginForm, .3, { y: -100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.02')
     
       tl
-      .from(signUpBox, .35, { y: -100, autoAlpha: 0, ease: Bounce.easeOut })
-      .from(signBox,  .35, { y: -100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
-      .from(signUpHead,  .35, { y: -100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
-      .from(signUpForm, .35, { y: -100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
+      .from(signUpBox, .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut })
+      .from(signBox,  .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
+      .from(signUpHead,  .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
+      .from(signUpForm, .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
 
     console.log("ran ")
   })(jQuery);
