@@ -6,7 +6,7 @@ console.log("hello");
     var spotify = new Spotify(keys.spotify);
 
 
-    module.exports.mySpotify = function(artistName){
+    module.exports.mySpotify = function(){
         
         /*
         function sleep(milliseconds) {
@@ -22,8 +22,8 @@ console.log("hello");
         //now call spotify for the artist
         */
         spotify.search({
-            type: "artist", 
-            query: artistName,//grabed from the users inputed argument after the liri command
+            type: "track", 
+            query: "505",//grabed from the users inputed argument after the liri command
             limit: 1 //only grab one song please
         }, function(err,data) {
             //check for errors

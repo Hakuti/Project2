@@ -15,11 +15,15 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
+  app.post("/api/", function(req, res) {
     db.Example.create(req.body).then(function(dbExample) {
       res.json(dbExample);
     });
   });
+
+  app.get("/api/track",function(req,res){
+    myspotify.mySpotify();
+  })
 
   // query spotify for all the artists related to selected genre
   app.get("/api", function(req, res) {
