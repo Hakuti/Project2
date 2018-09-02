@@ -26,7 +26,7 @@ module.exports = function(app) {
   // query spotify for all the artists related to selected genre
   app.get("/api", function(req, res) {
     db.artists.findAll({
-      where: {genre: "Pop"}
+      where: {genre: "Rap"}
     }).then(function(dbartists) {
       res.json(dbartists);
 
