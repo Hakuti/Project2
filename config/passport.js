@@ -3,26 +3,26 @@ var LocalStrategy = require("passport-local").Strategy;
 
 var db = require("../models");
 
-// Telling passport we want to use a Local Strategy. In other words, we want login with a username/email and password
+// Telling passport we want to use a Local Strategy. In other words, we want login with a username/gamer_tag and password
 passport.use(new LocalStrategy(
-  // Our user will sign in using an email, rather than a "username"
+  // Our user will sign in using an gamer_tag, rather than a "username"
   {
-    usernameField: "email"
+    usernameField: "gamer_tag"
   },
-  function(email, password, done) {
+  function(gamer_tag, password, done) {
     // When a user tries to sign in this code runs
     db.User.findOne({
       where: {
-        email: email
+        gamer_tag: gamer_tag
       }
     }).then(function(dbUser) {
-      // If there's no user with the given email
+      // If there's no user with the given gamer_tag
       if (!dbUser) {
         return done(null, false, {
-          message: "Incorrect email."
+          message: "Incorrect gamer_tag."
         });
       }
-      // If there is a user with the given email, but the password the user gives us is incorrect
+      // If there is a user with the given gamer_tag, but the password the user gives us is incorrect
       else if (!dbUser.validPassword(password)) {
         return done(null, false, {
           message: "Incorrect password."
