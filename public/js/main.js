@@ -9,12 +9,12 @@
     list8 = $('#hs8'),
     list9 = $('#hs9'),
     list10 = $('#hs10'),
-    hsHead = $('#hsHead')
-    hsBox = $('#hsBox')
+    hsHead = $('#hsHead'),
+    hsBox = $('#hsBox'),
     mainBox = $('#infoBox'),
     subBox = $('#subBox'),
-    infoHead= $('#infoHead')
-    loginForm = $('#loginForm')
+    infoHead= $('#infoHead'),
+    loginForm = $('#loginForm'),
     signUpBox = $('#signUpBox'),
     signBox = $('signBox'),
      signUpHead= $('#signUpHead'),
