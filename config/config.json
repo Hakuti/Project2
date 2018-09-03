@@ -1,10 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
-    "database": "top_artists",
+    "database": "burger_db",
     "host": "localhost",
-    "port": 8889,
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
