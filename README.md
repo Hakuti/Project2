@@ -27,8 +27,10 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://giant.gfycat.com/GratefulUnknownCaracal.gif)
-
+![screenshot]()
+<p align="center">
+  <img src="https://giant.gfycat.com/GratefulUnknownCaracal.gif">
+  </p>
 ## Key Features
 
 * PLACEHOLDER
