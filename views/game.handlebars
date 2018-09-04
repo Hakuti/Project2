@@ -1,150 +1,145 @@
-<div class="container">
-    <div class="row">
-      <div class="col-12">
-        
-        {{!-- JUMBOTRON HEADING --}}
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-3">Fluid jumbo heading</h1>
-            <p class="lead">Jumbo helper text</p>
-            <button type="button" class="secondary" style="margin-left: 950px; margin-bottom: -10px;">Highscores</button>
-            </p>
-          </div>
-        </div>
-      </div>   
-    </div>
-
-{{!-- ALBUM ART --}}
-    <div class="row">
-      <div class="col-6">
-        {{!-- FIRST CARD --}}
-        <div class="card">
-          <div class="card-body" style="height: 250px;;">
-            <blockquote class="blockquote">
-              <p>Quote</p>
-              {{!-- ALBUM COVER IMAGE --}}
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/602f4731226337.5646928c3633f.jpg" alt="" height="150" width="150">
-              <footer class="card-blockquote">Footer<cite title="Source title">Source title</cite></footer>
-            </blockquote>
-          </div>
-        </div>
+    {{!-- JUMBOTRON HEADING --}}
+    <div class="jumbotron jumbotron-fluid" style="background-color:#fffeb3; ">
+      <div class="container">
+        <h1 class="display-3">Fluid jumbo heading</h1>
+        <p class="lead">Jumbo helper text</p>
+        <button type="button" class="secondary" style="margin-left: 950px; margin-bottom: -10px;">Highscores</button>
+        </p>
       </div>
+    </div>
+    <div>
+      ok
+      </div>
+    <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; height: 1000px; width: 800px;">
+    <br>
 
-  {{!-- SECOND CARD --}}
-      <div class="col-6">
+  {{!-- ALBUM ART --}}
+  <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; ">
+      <div class="row">
+        <div class="col-6">
+          {{!-- FIRST CARD --}}
+        <div class="card bg-dark text-white">
+            <img class="card-img" src="https://i.scdn.co/image/3d727554b08c9ce5c04b5cf82144150e3291d2fd" alt="Card image">
+            <div class="card-img-overlay">
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 ">
           <div class="card">
             <div class="card-body">
-              <blockquote class="blockquote">
-                {{!-- HEADING --}}
-                <p>Points</p>
-                {{!-- POINTS DISPLAY --}}
-                <footer class="card-blockquote"><cite title="Source title"> 1000000</cite></footer>
-              </blockquote>
+              {{!-- HEADING --}}
+              <h4 class="card-title" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">Name that artist!</h4>
+                {{!-- SPOTIFY EMBEDED PLAYER --}}
+                  <div class=""  style=" height:auto; ">
+                    {{!-- <iframe src="https://p.scdn.co/mp3-preview/8c174ce25d94b502dfe31f0da8a070a32fb263db?cid=5eb1f3410ff949e89b4db31703aca23e" width="470" height="200" frameborder="0" autoplay="false" allowtransparency="false" allow="encrypted-media"></iframe> --}}
+                    </div>
+                  {{!-- <p class="card-text">Text</p> --}}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
-<br>
-<br>
+          </div>
+      <br>
+      <hr>
+      <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; height:500px;" >
+        {{!-- SECOND CARD --}}
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Points</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+                    <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Streak</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+                    <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:35px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Lives</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
+                    </blockquote>
+                  </div>
+              </div>               
+              </div>         
+          </div>
+      <br>
+      <br>
 
 {{!-- THIRD CARD --}}
-    <div class="row">
-      <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-            {{!-- HEADING --}}
-            <h4 class="card-title">Title</h4>
-              {{!-- SPOTIFY EMBEDED PLAYER --}}
-                <div class="container">
-                  <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="1035" height="80" frameborder="0" autoplay="true" allowtransparency="true" allow="encrypted-media"></iframe>
-                  </div>
-                <p class="card-text">Text</p>
+
+
+
+{{!-- ANSWER PLACEHOLDER --}}
+<div class="container">
+<div class="row">
+  {{!-- ANSWER 1 --}}
+      {{!-- The Answer Buttons --}}
+
+      <div class="navbox-tiles">
+        <div class="row">
+          <div class="col-6">
+            <a href="#" class="tile" style="float: right;">
+              <div class="icon"><i class="fa fa-home"></i></div>
+              <span class="title">Home</span>
+            </a>
+            </div>
+            <br>
+            <div class="col-6">
+            <a href="#" class="tile">
+              <div class="icon"><i class="fa fa-calendar"></i></div>
+              <span class="title">Calendar</span>
+            </a>
+          </div>
+          </div>
+          <br>
+          
+      <div class="row">
+          <div class="col-6">
+          <a href="#" class="tile" style="float: right;;">
+              <div class="icon"><i class="fa fa-envelope-o"></i></div>
+              <span class="title">Email</span>
+            </a>
+            </div>
+            <div class="col-6">
+            <a href="#" class="tile">
+              <div class="icon"><i class="fa fa-file-image-o"></i></div>
+              <span class="title">Photos</span>
+                </a>
               </div>
             </div>
           </div>
-        </div>
-
-    <hr>
-    <br>
-
-{{!-- ANSWER PLACEHOLDER --}}
-    <div class="container">
-    <div class="row">
-      {{!-- ANSWER 1 --}}
-        <div class="col-6">
-          <button type="button" name="" id="" class="secondary" btn-lg btn-block style="margin-left: 450px; position: absolute;">okayyyy</button>
-        </div>
-          <hr>
-        {{!-- ANSWER 2 --}}
-        <div class="col-6">
-            <button type="button" name="" id="" class="secondary" btn-lg btn-block>okayyyy</button>
-          </div>
-        </div>
-        
-    <div class="row">
-      {{!-- ANSWER 3 --}}
-        <div class="col-6">
-            <button type="button" name="" id="" class="secondary" btn-lg btn-block style="margin-left: 450px; position: relative;">okayyyy</button>
-          </div>
-          <hr>
-          {{!-- ANSWER 4 --}}
-          <div class="col-6">
-              <button type="button" name="" id="" class="secondary" btn-lg btn-block >okayyyy</button>
-              </div>
           </div>
         </div>
 
-{{!-- END-GAME BUTTON --}}
-    <div class="row">
-      <div class="col-12">
-        <br>
-        <br>
-        <button type="button" class="btn btn-dark-outline" style="margin-left: 950px;">End Game</button>
+  {{!-- END-GAME BUTTON --}}
+      <div class="row">
+        <div class="col-12">
+          <br>
+          <br>
+          <button type="button" class="btn btn-dark-outline" style="margin-left: 950px;">End Game</button>
+        </div>
       </div>
-    </div>
+      </div>
+      </div>
+  <br>
 
-    <br>
-    
-    {{!-- FOOTER --}}
-    <footer>
-    <div class="container" style="background: white;">
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs|pills" id="navId">
-            <li class="nav-item">
-              <a href="#tab1Id" class="nav-link active">Active</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="#tab2Id">Action</a>
-                <a class="dropdown-item" href="#tab3Id">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#tab4Id">Action</a>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a href="#tab5Id" class="nav-link">Another link</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
-          
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-            <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-          </div>
-          </div>
-          </footer>
-
-          {{!-- NAVBAR SCRIPTING --}}
-          <script>
-            $('#navId a').click(e => {
-              e.preventDefault();
-              $(this).tab('show');
-            });
-          </script>
