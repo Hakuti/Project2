@@ -45,5 +45,4 @@
       .from(signUpHead,  .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
       .from(signUpForm, .35, { y: +100, autoAlpha: 0, ease: Bounce.easeOut }, '-=.1')
 
-    console.log("ran ")
   })(jQuery);

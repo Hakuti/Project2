@@ -1,3 +1,4 @@
+/* HIGHSCORES LIST  */
 .list {
   list-style: none;
   text-align: left;
@@ -6,99 +7,99 @@
   padding-bottom: 20px;
   font-size: 20px; 
   color: ghostwhite;}
-
+ 
+  #tcolor {
+    color: bisque;
+  }
+  /* LIST HOVER*/
   .list a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
     color: #fefefe;
-    background-color:dimgrey;
-    border: goldenrod;
+    background-color:#a5494d ;
+    border: #a5494d ;
     border-style: groove; 
-    box-shadow: 5px 10px;
       border-radius: 20px;
   }
     .list a:hover {
-      background-color: rgba(22, 53, 230, 0.7); }
+      background-color: coral; }
       .list a:hover span {
         left: 8px;
         -webkit-transition: all 0.2s ease-out;
-                transition: all 0.2s ease-out; }
+                transition: all 0.2s ease-out;
+      }
   .list li {
     margin: 0 0 1px 0;
     padding: 0; }
-#hsBox{
-  border: goldenrod;
-  border-style: groove;
-  border-radius: 20px;
-  background-color: rgb(8, 114, 226);
-  color: #000000;
-  box-shadow: 15px 30px;
-  padding-top: 20px;
-  margin-top: 15px;
-  
-    
-    }
-    #hsHead{
-      background-color: rgba(129, 187, 13, 0.767);
-      border: goldenrod;
+
+    /* HIGHSCORES */
+
+    /* BACKGROUND */
+ #hsBox{
+      background-color:#a5494d ;
+      border: #a5494d ; 
       border-style: groove;
-      color: rgb(8, 8, 8);
+      border-radius: 20px;
+      color: #fefefe;
+      padding-top: 20px;
+      margin-top: 15px;
+  }
+  /* HEADING */
+  #hsHead {
+      background-color:#a5494d ;
+      border: #a5494d ;
+      border-style: groove;
+      color: bisque;
       text-align: center;
       border-radius: 10px;
-      box-shadow: 5px 10px;
       margin-bottom: 15px;
   }
-  #infoBox{
-    border: goldenrod;
-    border-style: groove;
-    background-color: rgb(9, 183, 38);
-    border-radius: 20px;
-    padding:10px;
-    margin-top: 15px;
-    box-shadow: 15px 30px;
-    margin-bottom: 35px;
-  }
+  /*  */
+
+  /* SIGN IN BACKGROUND */
   #subBox{
-    border: goldenrod;
+    background-color:#a5494d ;
+    border: #a5494d ;
+    color: bisque;
     border-style: groove;
-    background-color:rgb(8, 114, 226);
     margin-bottom: 15px;
     margin-top: 15px;
     padding: 15px;
     border-radius: 20px;
-    box-shadow: 5px 10px;
   }
-  #infoHead{
-    background-color: rgb(163, 100, 175);
-    border: goldenrod;
+  /* CREATE USER BACKGROUND */
+  #signBox{
+    background-color:#a5494d ;
+    border: #a5494d ;
+    color: bisque;
     border-style: groove;
-    color:rgba(4, 6, 19, 0.7);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+  /* CREATE USER HEADING */
+  #signUpHead{
+    background-color:#a5494d ;
+    border: #a5494d ;
+    color: bisque;
+    border-style: groove;
     text-align: center;
     border-radius: 20px;
     margin-top: 10px;
-    box-shadow: 5px 10px;
     padding: 10px;
   }
+  /*  */
 
-  #signBox{
-    border: goldenrod;
+  /* SIGN IN HEADING */
+  #infoHead{
+    background-color:#a5494d ;
+    border: #a5494d ;
+    color: bisque;
     border-style: groove;
-    background-color: rgb(187, 102, 33);
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 20px;
-    box-shadow: 5px 10px;
-  }
-  #signUpHead{
-    background-color: rgb(163, 100, 175);
-    border: goldenrod;
-    border-style: groove;
-    color:rgba(4, 6, 19, 0.7);
     text-align: center;
     border-radius: 20px;
     margin-top: 10px;
-    box-shadow: 5px 10px;
     padding: 10px;
   }
