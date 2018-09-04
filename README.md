@@ -27,9 +27,9 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot]()
+
 <p align="center">
-  <img src="https://giant.gfycat.com/GratefulUnknownCaracal.gif">
+  <img src="">
   </p>
 ## Key Features
 
