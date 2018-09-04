@@ -39,7 +39,7 @@
  #hsBox{
       background-color:#a5494d ;
       border: #a5494d ; 
-      border-style: groove;
+      /* border-style: groove; */
       border-radius: 20px;
       color: #fefefe;
       padding-top: 20px;
@@ -49,11 +49,57 @@
   #hsHead {
       background-color:#a5494d ;
       border: #a5494d ;
-      border-style: groove;
+      /* border-style: groove; */
       color: bisque;
       text-align: center;
       border-radius: 10px;
       margin-bottom: 15px;
+  }
+    /* The styling for the ANSWER BUTTON  */
+    .push_button {
+      position: relative; 
+      width:300px;
+      height:60px;
+      text-align:center;
+      color:#FFF;
+      text-decoration:none;
+      line-height:63px;
+      font-family:'Oswald', Helvetica;
+      display: block;
+      margin: 30px;
+      
+  }
+  .push_button:before {
+      background:#f0f0f0;
+      background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#D0D0D0), to(#f0f0f0));
+      border-radius:5px;
+      box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+      position: absolute;
+      content: "";
+      left: -10px; right: -6px;
+      top: -10px; bottom: -10px;
+      z-index: -1;
+  }
+   .push_button:active {
+     box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset;
+      top:5px;
+  }
+  .push_button:active:before{
+      top: -11px;
+      bottom: -5px;
+      content: "";
+  }
+   .blue {
+      text-shadow:-1px -1px 0 #2C7982;
+      background: #3EACBA;
+      border:1px solid #379AA4;
+      background-image:linear-gradient(top, #48C6D4, #3EACBA);
+      border-radius:5px;
+      box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+  }
+   .blue:hover {
+      background: #48C6D4;
+      background-image:linear-gradient(top, #3EACBA, rgb(62, 186, 72));
   }
   /*  */
 
@@ -79,6 +125,7 @@
     padding: 15px;
     border-radius: 20px;
   }
+ 
   /* CREATE USER HEADING */
   #signUpHead{
     background-color:#a5494d ;
@@ -97,9 +144,19 @@
     background-color:#a5494d ;
     border: #a5494d ;
     color: bisque;
-    border-style: groove;
+    /* border-style: groove; */
     text-align: center;
     border-radius: 20px;
     margin-top: 10px;
     padding: 10px;
+  }
+
+ #side2 {
+    backface-visibility: hidden;
+    border-radius: 6px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    visibility: hidden;
   }

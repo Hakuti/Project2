@@ -2,12 +2,12 @@
 <div class="row">
     <div class="col-12">
     {{!-- JUMBOTRON HEADING --}}
-    <div class="jumbotron jumbotron-fluid" style="background-color: #e5a267 ;">
+    <div class="jumbotron jumbotron-fluid" style="background-color: 	#535353;">
         <div class="container">
         <h1 class="display-3">Fluid jumbo heading</h1>
         <p class="lead">Jumbo helper text</p>
         <a class="btn btn-large btn-block" href="/game" role="button" style="width: 750px; height: 75px; margin-left: 175px; font-size:40px; 
-        background-color: #d27254;  color: bisque;">Game</a>
+        background-color: #a5494d;  color: bisque;">Game</a>
         </p>
         </div>
     </div>
@@ -27,7 +27,7 @@
                     <div class="card" style="background-color: #d27254;">
                         {{!-- HIGHSCORES --}}
                         <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body">
+                        <div class="card-body" id="hsBox">
                         <h2 id="hsHead"> <span><strong> High Scores </strong></span></h2>
                     <div class="list" id="tcolor">
                         <div id="hs1"><a><span><strong> Player </strong> 1 </span></a></div>
@@ -51,7 +51,7 @@
     <div class="container col-4" id="">
         <div class="card" style="background-color: #d27254;">
             <div class="card-body">
-            <div class="container" id="subBox">
+            <div class="container" id="side1">
 
                 {{!-- HEADING --}}
             <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
@@ -62,22 +62,24 @@
                     <label for="playerId"> <span><strong> Player Login </strong></span></label>
                     <input type="text" class="form-control" id="username_login" aria-describedby="username" placeholder="Enter User Name">
                 </div>
-
+                <div id="dom">
                 {{!-- PASSWORD INPUT --}}
-                <div class="form-group">
+                <div class="form-group" >
                     <label for="Password"> <span><strong> Password </strong></span></label>
                     <input type="password" class="form-control" id="password_login" placeholder="Password">
                 </div>
 
                 {{!-- LOGIN BUTTON --}}
-                <button type="submit" class="btn btn-lg btn-block" style=" background-color: #d27254;  color: bisque;">Login</button>
+                <button type="submit" class="btn btn-lg btn-block" style=" background-color: #a5494d ;  color: bisque;">Login</button>
+                
+                    {{!-- POST NEW USER --}}
+                    <button type="button" id="register" class="btn btn-lg btn-block" style=" background-color: #a5494d ; color: bisque;">Create</button>
+                    </div>
             </form>
-        </div>
 
-        {{!-- CREATE NEW USER --}}
-        <div class="container" id="signBox">
+{{!-- HEADING --}}
 
-            {{!-- HEADING --}}
+            <div id="side2">   
                 <h2 id="signUpHead"> <span><strong> Create New User Name </strong></span></h2>
                 <form id="signUpForm">
 
@@ -97,6 +99,9 @@
                     <button type="submit" class="btn btn-lg btn-block" style=" background-color: #d27254;  color: bisque;">Create</button>
                 </form>
                 </div>
+        </div>
+
+
             </div>
         </div>
         </div>
@@ -112,3 +117,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#register").click(function(){
+           $( "#dom" ).replaceWith( $( "#side2" ));
+            });
+        });       
+    </script>
