@@ -11,7 +11,7 @@
         </p>
         </div>
     </div>
-    </div>   
+</div>   
 
 {{!-- MAIN CONTAINER --}}
 <div class="container">
@@ -55,7 +55,7 @@
 
                 {{!-- HEADING --}}
             <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
-            <form id="loginForm">
+            <form id="theForm">
 
                 {{!-- USERNAME INPUT --}}
                 <div class="form-group">
@@ -64,21 +64,21 @@
                 </div>
                 <div id="dom">
                 {{!-- PASSWORD INPUT --}}
-                <div class="form-group" >
+                <div class="form-group">
                     <label for="Password"> <span><strong> Password </strong></span></label>
                     <input type="password" class="form-control" id="password_login" placeholder="Password">
                 </div>
 
                 {{!-- LOGIN BUTTON --}}
-                <button type="submit" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ;  color: bisque;">Login</button>
+                <button type="submit" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ;  color: bisque;">Login</button>
                 
-                    {{!-- POST NEW USER --}}
-                    <button type="button" id="register" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ; color: bisque;">Create</button>
-                    </div>
+                {{!-- POST NEW USER --}}
+                <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ; color: bisque;">Sign Up</button>
+                </div>
             </form>
 
 {{!-- HEADING --}}
-
+            
             <div id="side2">   
                 <h2 id="signUpHead"> <span><strong> Create New User Name </strong></span></h2>
                 <form id="signUpForm">
@@ -98,7 +98,7 @@
                     {{!-- POST NEW USER --}}
                     <button type="submit" class="btn btn-lg btn-block" style=" background-color: #d27254;  color: bisque;">Create</button>
                 </form>
-                </div>
+            </div>
         </div>
 
 
