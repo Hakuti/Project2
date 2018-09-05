@@ -11,7 +11,7 @@ $(document).ready(function(){
             console.log("hello " + genre);
             //send the genre as a route param; /api/game/:genre
             launch(genre);
-            _launch();
+            
             
         })
     });

@@ -21,15 +21,7 @@ module.exports = function(app) {
     
   });
 
-  app.post("api/game", function(req, res) {
-    /*if (req.user) {
-      res.redirect("/game");
-    }*/
-    console.log("html routin");
-  }).then(function(){
-    res.redirect(307, "/game");
-  })
-
+  
 
   
 
