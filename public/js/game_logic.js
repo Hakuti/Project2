@@ -10,6 +10,7 @@ $(document).ready(function(){
         $("#start_game").on("click", function(){
             console.log("hello " + genre);
             launch(genre);
+            
         })
     });
 
@@ -17,7 +18,7 @@ $(document).ready(function(){
         console.log("eyy " + test);
         console.log(test);
         $.get("/api", {
-            temp: test
+            genre: test
         } ).then(function(data){
             console.log(data);
         });
