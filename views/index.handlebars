@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
 <div class="row">
     <div class="col-12">
     {{!-- JUMBOTRON HEADING --}}
@@ -11,103 +11,118 @@
         </p>
         </div>
     </div>
-    </div>   
+</div>-->   
 
 {{!-- MAIN CONTAINER --}}
 <div class="container">
     {{!-- CARD 1 BACKGROUND COLOR  --}}
-    <div class="card" style="background-color: #e5a267 ;">
-        {{!-- FIRST CARD --}}
-        <div class="card-body">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Text</p>
-            <div class="row align-items-start">
-                <div class="container col-4" id="">
-                    {{!-- HIGHSCORES CARD BG COLOR --}}
-                    <div class="card" style="background-color: #d27254;">
-                        {{!-- HIGHSCORES --}}
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
-                        <div class="card-body" id="hsBox">
-                        <h2 id="hsHead"> <span><strong> High Scores </strong></span></h2>
-                    <div class="list" id="tcolor">
-                        <div id="hs1"><a><span><strong> Player </strong> 1 </span></a></div>
-                        <div id="hs2"><a><span><strong> Player </strong> 2 </span></a></div>
-                        <div id="hs3"><a><span><strong> Player </strong> 3 </span></a></div>
-                        <div id="hs4"><a><span><strong> Player </strong> 4 </span></a></div>
-                        <div id="hs5"><a><span><strong> Player </strong> 5 </span></a></div>
-                        <div id="hs6"><a><span><strong> Player </strong> 6 </span></a></div>
-                        <div id="hs7"><a><span><strong> Player </strong> 7 </span></a></div>
-                        <div id="hs8"><a><span><strong> Player </strong> 8 </span></a></div>
-                        <div id="hs9"><a><span><strong> Player </strong> 9 </span></a></div>
-                        <div id="hs10"><a><span><strong> Player </strong> 10 </span></a></div>
-                    </div>
-                </div>
-            </div>   
-        </div>
-
-    {{!--SECOND CARD ------
-    -       LOGIN FORM           -
-    ---------------------------------}}
-    <div class="container col-4" id="">
-        <div class="card" style="background-color: #d27254;">
+        <div class="card" style="background-color: #e5a267 ;">
+            {{!-- FIRST CARD --}}
             <div class="card-body">
-            <div class="container" id="side1">
-
-                {{!-- HEADING --}}
-            <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
-            <form id="loginForm">
-
-                {{!-- USERNAME INPUT --}}
-                <div class="form-group">
-                    <label for="playerId"> <span><strong> Player Login </strong></span></label>
-                    <input type="text" class="form-control" id="username_login" aria-describedby="username" placeholder="Enter User Name">
-                </div>
-                <div id="dom">
-                {{!-- PASSWORD INPUT --}}
-                <div class="form-group" >
-                    <label for="Password"> <span><strong> Password </strong></span></label>
-                    <input type="password" class="form-control" id="password_login" placeholder="Password">
-                </div>
-
-                {{!-- LOGIN BUTTON --}}
-                <button type="submit" class="btn btn-lg btn-block" style=" background-color: #a5494d ;  color: bisque;">Login</button>
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Text</p>
+                <div class="row align-items-start">
+                    <div class="container col-4" id="">
+                        {{!-- HIGHSCORES CARD BG COLOR --}}
+                        <div class="card" style="background-color: #d27254;">
+                            {{!-- HIGHSCORES --}}
+                            <img class="card-img-top" src="holder.js/100x180/" alt="">
+                            <div class="card-body" id="hsBox">
+                                <h2 id="hsHead"> <span><strong> High Scores </strong></span></h2>
+                                <div class="list" id="tcolor">
+                                    <div id="hs1"><a><span><strong> Player </strong> 1 </span></a></div>
+                                    <div id="hs2"><a><span><strong> Player </strong> 2 </span></a></div>
+                                    <div id="hs3"><a><span><strong> Player </strong> 3 </span></a></div>
+                                    <div id="hs4"><a><span><strong> Player </strong> 4 </span></a></div>
+                                    <div id="hs5"><a><span><strong> Player </strong> 5 </span></a></div>
+                                    <div id="hs6"><a><span><strong> Player </strong> 6 </span></a></div>
+                                    <div id="hs7"><a><span><strong> Player </strong> 7 </span></a></div>
+                                    <div id="hs8"><a><span><strong> Player </strong> 8 </span></a></div>
+                                    <div id="hs9"><a><span><strong> Player </strong> 9 </span></a></div>
+                                    <div id="hs10"><a><span><strong> Player </strong> 10 </span></a></div>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
                 
-                    {{!-- POST NEW USER --}}
-                    <button type="button" id="register" class="btn btn-lg btn-block" style=" background-color: #a5494d ; color: bisque;">Create</button>
+
+                    {{!--SECOND CARD ------
+                    -       LOGIN FORM           -
+                    ---------------------------------}}
+                    <div class="container col-4" id="switch1">
+                        <div class="card" style="background-color: #d27254;">
+                            <div class="card-body">
+                                <div class="container" id="side1">
+
+                                        {{!-- HEADING --}}
+                                    <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
+                                    <form id="theForm">
+
+                                        {{!-- USERNAME INPUT --}}
+                                        <div class="form-group">
+                                            <label for="playerId"> <span><strong> Username </strong></span></label>
+                                            <input type="text" class="form-control" id="username_login" aria-describedby="username" placeholder="Enter User Name">
+                                        </div>
+                                        <div id="dom">
+                                        {{!-- PASSWORD INPUT --}}
+                                        <div class="form-group">
+                                            <label for="Password"> <span><strong> Password </strong></span></label>
+                                            <input type="password" class="form-control" id="password_login" placeholder="Password">
+                                        </div>
+
+                                        {{!-- LOGIN BUTTON --}}
+                                        <button type="button" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ;  color: bisque;">Login</button>
+                                        
+                                        {{!-- POST NEW USER --}}
+                                        <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ; color: bisque;">Sign Up</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-            </form>
-
-{{!-- HEADING --}}
-
-            <div id="side2">   
-                <h2 id="signUpHead"> <span><strong> Create New User Name </strong></span></h2>
-                <form id="signUpForm">
-
-                    {{!-- NEW USER: USERNAME INPUT --}}
-                    <div class="form-group">
-                        <label for="playerId"> <span><strong> New Player Name </strong></span></label>
-                        <input type="text" class="form-control" id="username_new" aria-describedby="userName" placeholder="Enter User Name">
+                    <!--drop down hidden for now-->
+                    <div id ="menu" class="card" style="background-color: #d27254;">
+                        <div class="card-body">
+                            <div class="container col-4" id="genreBox">
+                                <div class="container" id="GsubBox">
+                                    <h2 id="genreHead"> <span><strong>Pick Your Favorite Genre </strong></span></h2>
+                                    <form id="loginForm">
+                                        <div class="form-group" id=gGroup>
+                                            <label for="GenreSelect"> <span><strong> Select Genre </strong></span></label>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Select Genre
+                                                    </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
+                                                    <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
+                                                    <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
+                                                    <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
+                                                    <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
+                                                    <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
+                                                    <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
+                                                    <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
+                                                    <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
+                                                    <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
+                                                    <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
+                                                    <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
+                                                    <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
+                                                </div>
+                                                <button id="start_game" type="button" class="btn btn-primary">Start the Game</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!--end drop down-->
 
-                    {{!-- NEW USER: PASSWORD INPUT --}}
-                    <div class="form-group">
-                        <label for="exampleInputPassword1"> <span><strong> Password </strong></span></label>
-                        <input type="password" class="form-control" id="password_new" placeholder="Password">
-                    </div>
-
-                    {{!-- POST NEW USER --}}
-                    <button type="submit" class="btn btn-lg btn-block" style=" background-color: #d27254;  color: bisque;">Create</button>
-                </form>
                 </div>
-        </div>
-
-
-            </div>
-        </div>
-        </div>
-        </div>
-        </div>
-    </div>        
+        </div>        
+    </div>
 </div>
 
 {{!-- LINKING DEPENDENCIES --}}
