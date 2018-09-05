@@ -1,12 +1,58 @@
 /* HIGHSCORES LIST  */
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+body{
+  background-image: url("b.png");
+  background-repeat: no-repeat;
+  background-size:cover, contain;
+  height: 1500px;
+  margin-bottom: 50px;
+}
+#bg {
+  background-color:#F4CC81;
+  background-repeat: no-repeat;
+  border-style: hidden;
+}
+#shadow{
+  -webkit-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+  box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+}
+audio{
+  color: #8ACCA5;
+}
+ #fa-question{
+   margin-top: 20px;
+  font-size: 50px;
+}
+
+
+#navhead{
+  font-size: 25px;
+}
+#navhead1{
+  font-size: 20px;
+}
+
+
+#logo {
+  font-family: 'Orbitron', sans-serif;
+  color: #EE7F52;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 150px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  margin-left: 185px;
+}
+
 .list {
-  list-style: none;
+  list-style-type: square;
   text-align: left;
-  margin: 0 5px 0 2px;
-  padding: 0;
-  padding-bottom: 20px;
   font-size: 20px; 
-  color: ghostwhite;}
+  line-height: 2;
+}
  
   #tcolor {
     color: bisque;
@@ -17,43 +63,55 @@
     padding: 10px 20px;
     text-decoration: none;
     color: #fefefe;
-    background-color:#a5494d ;
-    border: #a5494d ;
-    border-style: groove; 
-      border-radius: 20px;
+    background-color:#EE7F52;
+
+    /* border-style: groove;  */
+      border-radius: 3px;
   }
     .list a:hover {
-      background-color: coral; }
+      -webkit-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+      box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+ }
       .list a:hover span {
         left: 8px;
         -webkit-transition: all 0.2s ease-out;
                 transition: all 0.2s ease-out;
       }
   .list li {
-    margin: 0 0 1px 0;
-    padding: 0; }
-
+   }
+   #hs1, #hs2, #hs3, #hs4, #hs5, #hs6, #hs7, #hs8, #hs9, #hs10 {
+   
+      border-bottom: 2px solid #F4CC81;
+}
+#access li{
+  margin: 0 0 30px 0;
+}
     /* HIGHSCORES */
 
     /* BACKGROUND */
  #hsBox{
-      background-color:#a5494d ;
+      background-color:#F4CC81; 
       border: #a5494d ; 
       /* border-style: groove; */
-      border-radius: 20px;
-      color: #fefefe;
-      padding-top: 20px;
+      border-radius: 3px;
+      color: white;
+      padding-top: 30px;
       margin-top: 15px;
+      -webkit-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
+      box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
   }
   /* HEADING */
   #hsHead {
-      background-color:#a5494d ;
+      background-color:#F4CC81 ;
       border: #a5494d ;
       /* border-style: groove; */
-      color: bisque;
+      color: black;
       text-align: center;
-      border-radius: 10px;
+      border-radius: 3px;
       margin-bottom: 15px;
+      padding-bottom: 5px;
   }
     /* The styling for the ANSWER BUTTON  */
     .push_button {
@@ -105,74 +163,39 @@
 
   /* SIGN IN BACKGROUND */
   #subBox{
-    background-color:#a5494d ;
+    background-color:#EE7F52 ;
     border: #a5494d ;
     color: bisque;
     border-style: groove;
     margin-bottom: 15px;
     margin-top: 15px;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 3px;
   }
-  /* CREATE USER BACKGROUND */
-  #signBox{
-    background-color:#a5494d ;
-    border: #a5494d ;
-    color: bisque;
-    border-style: groove;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding: 15px;
-    border-radius: 20px;
-  }
- 
-  /* CREATE USER HEADING */
-  #signUpHead{
-    background-color:#a5494d ;
-    border: #a5494d ;
-    color: bisque;
-    border-style: groove;
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 10px;
-    padding: 10px;
-  }
-  /*  */
+
 
   /* SIGN IN HEADING */
   #infoHead{
-    background-color:#a5494d ;
+    background-color:#F4CC81 ;
     border: #a5494d ;
-    color: bisque;
+    color: black;
     /* border-style: groove; */
     text-align: center;
-    border-radius: 20px;
-    margin-top: 10px;
-    padding: 10px;
+    border-radius: 3px;
+    margin-top: 8px;
+    padding-bottom: 5px;
   }
 
  #side2 {
     backface-visibility: hidden;
-    border-radius: 6px;
+    border-radius: 0px;
     height: 100%;
     position: absolute;
     overflow: hidden;
     width: 100%;
     visibility: hidden;
   }
-  .navigation-bar {
-    height: 50px;
-    position: relative;
-    z-index: 1000;
-  }
-  
-  .navigation-bar .bar {
-    background-color: #252525;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 2;
-  }
+
   
   .navigation-bar .navbox {
     visibility: hidden;
@@ -246,9 +269,9 @@
   
   .navbox-tiles .tile {
     display: block;
-    background-color: #3498db;
-    width: 30.3030303030303%;
-    height: 0;
+    background-color: #EE7F52;
+    width: 70.3030303030303%;
+    height: 70%;
     padding-bottom: 29%;
     float: left;
     border: 2px solid transparent;

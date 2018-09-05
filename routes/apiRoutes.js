@@ -47,7 +47,10 @@ module.exports = function(app) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/members");
+    //res.json("/members");
+
+    //actually don't reroute to anywhere, the login is noted in the db and then the login/signup box is 
+    //replaced with a drop down menu
   });
 
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to

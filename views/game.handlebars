@@ -1,20 +1,29 @@
     {{!-- JUMBOTRON HEADING --}}
-    <div class="jumbotron jumbotron-fluid" style="background-color:#fffeb3; ">
+    <div class="container">
+    <div class="jumbotron jumbotron-fluid" style="background-color:#F4CC81; border-radius: 15px;" id="shadow">
       <div class="container">
-        <h1 class="display-3">Fluid jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
-        <button type="button" class="secondary" style="margin-left: 950px; margin-bottom: -10px;">Highscores</button>
-        </p>
+        <div id="header">
+        <a href="/" id="logo" >Funker</a>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;" id="shadow"><i class="fas fa-star" id="navhead1"></i><a href="/"  style="color: white; text-decoration: none;"> Highscores</a></button>
+            </div>
+            <br>
+            <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px;" id="shadow"><i class="fab fa-github" id="navhead"></i><a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> Github</a></button>
+          </div>
+            </div>
+          </div>
+          </div>
+            </div>
       </div>
-    </div>
-    <div>
-      ok
-      </div>
-    <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; height: 1000px; width: 800px;">
+    <div class="container" style="background-color:#F4CC81; border-radius: 25px; height: 1000px; width: 800px;" id="shadow">
     <br>
 
   {{!-- ALBUM ART --}}
-  <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; ">
+  <div class="container" style="background-color:#F4CC81;border-radius: 25px; ">
       <div class="row">
         <div class="col-6">
           {{!-- FIRST CARD --}}
@@ -26,14 +35,20 @@
         </div>
     
         <div class="col-6 ">
-          <div class="card">
-            <div class="card-body">
-              {{!-- HEADING --}}
-              <h4 class="card-title" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">Name that artist!</h4>
+          <div class="card" id="bg" >
+            <div class="card-body"id="bg">
+               
+                     <h4 class="card-title" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">Name that song!</h4>
                 {{!-- SPOTIFY EMBEDED PLAYER --}}
-                  <div class=""  style=" height:auto; ">
-                    {{!-- <iframe src="https://p.scdn.co/mp3-preview/8c174ce25d94b502dfe31f0da8a070a32fb263db?cid=5eb1f3410ff949e89b4db31703aca23e" width="470" height="200" frameborder="0" autoplay="false" allowtransparency="false" allow="encrypted-media"></iframe> --}}
-                    </div>
+                  	<div id="wrapper" >
+                      <audio preload="auto" controls>
+                        <source  src="https://p.scdn.co/mp3-preview/8c174ce25d94b502dfe31f0da8a070a32fb263db?cid=5eb1f3410ff949e89b4db31703aca23e" >
+                      </audio>
+                      </div>
+                                  
+          
+              {{!-- HEADING --}}
+           
                   {{!-- <p class="card-text">Text</p> --}}
                 </div>
               </div>
@@ -42,7 +57,7 @@
           </div>
       <br>
       <hr>
-      <div class="container" style="background-color:tan;border: 5px solid rgb(87, 65, 65); border-style:solid; border-radius: 25px; height:500px;" >
+      <div class="container" style="background-color:#F4CC81;  border-radius: 25px; height:500px;" >
         {{!-- SECOND CARD --}}
         <div class="row">
             <div class="col-4">
@@ -62,7 +77,7 @@
                   <div class="card-body">
                     <blockquote class="blockquote">
                       {{!-- HEADING --}}
-                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Streak</p>
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fab fa-gripfire"></i>Streak</p>
                       {{!-- POINTS DISPLAY --}}
                       <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000</cite></footer>
                     </blockquote>
@@ -74,7 +89,7 @@
                   <div class="card-body">
                     <blockquote class="blockquote">
                       {{!-- HEADING --}}
-                      <p style="text-align:center; font-size:35px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Lives</p>
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-heart"></i>Lives</p>
                       {{!-- POINTS DISPLAY --}}
                       <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
                     </blockquote>
@@ -98,16 +113,16 @@
       <div class="navbox-tiles">
         <div class="row">
           <div class="col-6">
-            <a href="#" class="tile" style="float: right;">
-              <div class="icon"><i class="fa fa-home"></i></div>
-              <span class="title">Home</span>
+            <a href="#" class="tile" style="float: right;" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Home</span>
             </a>
             </div>
             <br>
             <div class="col-6">
-            <a href="#" class="tile">
-              <div class="icon"><i class="fa fa-calendar"></i></div>
-              <span class="title">Calendar</span>
+            <a href="#" class="tile" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Calendar</span>
             </a>
           </div>
           </div>
@@ -115,31 +130,20 @@
           
       <div class="row">
           <div class="col-6">
-          <a href="#" class="tile" style="float: right;;">
-              <div class="icon"><i class="fa fa-envelope-o"></i></div>
-              <span class="title">Email</span>
+          <a href="#" class="tile" style="float: right;" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Email</span>
             </a>
             </div>
             <div class="col-6">
-            <a href="#" class="tile">
-              <div class="icon"><i class="fa fa-file-image-o"></i></div>
-              <span class="title">Photos</span>
+            <a href="#" class="tile" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Photos</span>
                 </a>
               </div>
             </div>
           </div>
           </div>
+          
         </div>
-
-  {{!-- END-GAME BUTTON --}}
-      <div class="row">
-        <div class="col-12">
-          <br>
-          <br>
-          <button type="button" class="btn btn-dark-outline" style="margin-left: 950px;">End Game</button>
-        </div>
-      </div>
-      </div>
-      </div>
-  <br>
 
