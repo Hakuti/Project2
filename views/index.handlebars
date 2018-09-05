@@ -1,35 +1,43 @@
-<!--<div class="container">
-<div class="row">
-    <div class="col-12">
+
     {{!-- JUMBOTRON HEADING --}}
-    <div class="jumbotron jumbotron-fluid" style="background-color: 	#535353;">
-        <div class="container">
-        <h1 class="display-3">Fluid jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
-        <a class="btn btn-large btn-block" href="/game" role="button" style="width: 750px; height: 75px; margin-left: 175px; font-size:40px; 
-        background-color: #a5494d;  color: bisque;">Game</a>
-        </p>
+    <div class="container"  style="width: 1200px;">
+    <div class="jumbotron jumbotron-fluid" style="background-color:#F4CC81; border-radius: 15px;" id="shadow">
+      <div class="container">
+        <div id="header">
+        <a href="/" id="logo" >Funker</a>
         </div>
-    </div>
-</div>-->   
+        <br>
+        <div class="row">
+          <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;" id="shadow"><i class="fas fa-gamepad" id="navhead"></i><a href="/game"  style="color: white; text-decoration: none;"> Game</a></button>
+            </div>
+            <br>
+            <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px;" id="shadow"><i class="fab fa-github" id="navhead"></i><a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> Github</a></button>
+          </div>
+            </div>
+          </div>
+          </div>
+            </div>
+      </div>
+    <div class="container" style="background-color:#F4CC81; border-radius: 25px; height: 1000px; width: 800px;" id="shadow">
+
+
 
 {{!-- MAIN CONTAINER --}}
-<div class="container">
+<div class="container" style="width: 700px;">
     {{!-- CARD 1 BACKGROUND COLOR  --}}
-        <div class="card" style="background-color: #e5a267 ;">
             {{!-- FIRST CARD --}}
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-                <div class="row align-items-start">
-                    <div class="container col-4" id="">
-                        {{!-- HIGHSCORES CARD BG COLOR --}}
-                        <div class="card" style="background-color: #d27254;">
+            <div>   
+                <div class="row">
+                    <div class="col-6" id="">
+
                             {{!-- HIGHSCORES --}}
                             <img class="card-img-top" src="holder.js/100x180/" alt="">
                             <div class="card-body" id="hsBox">
-                                <h2 id="hsHead"> <span><strong> High Scores </strong></span></h2>
-                                <div class="list" id="tcolor">
+                                <h2 id="hsHead"><i class="fas fa-trophy"></i> <span><strong> High Scores </strong></span></h2><hr>
+                                <div class="list" style="background-color:#F4CC81;">
+                                    <div class="container">
                                     <div id="hs1"><a><span><strong> Player </strong> 1 </span></a></div>
                                     <div id="hs2"><a><span><strong> Player </strong> 2 </span></a></div>
                                     <div id="hs3"><a><span><strong> Player </strong> 3 </span></a></div>
@@ -40,22 +48,22 @@
                                     <div id="hs8"><a><span><strong> Player </strong> 8 </span></a></div>
                                     <div id="hs9"><a><span><strong> Player </strong> 9 </span></a></div>
                                     <div id="hs10"><a><span><strong> Player </strong> 10 </span></a></div>
-                                </div>
                             </div>
                         </div>   
                     </div>
-                
+                </div>
 
                     {{!--SECOND CARD ------
                     -       LOGIN FORM           -
                     ---------------------------------}}
-                    <div class="container col-4" id="switch1">
-                        <div class="card" style="background-color: #d27254;">
-                            <div class="card-body">
-                                <div class="container" id="side1">
+                    <div class="col-6" id="switch1" style="margin-top:40px; border-radius:25;">
+                        <div class="card" id="shadow" style="background-color:#F4CC81;border-radius:25;">
+                            <div class="card-body" style="border-radius:0;">
+                                <div class="container" id="side1" >
 
                                         {{!-- HEADING --}}
-                                    <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
+                                    <h2 id="infoHead"><i class="fas fa-lock"></i> <span><strong> Player Sign In </strong></span></h2>
+                                    <hr>
                                     <form id="theForm">
 
                                         {{!-- USERNAME INPUT --}}
@@ -70,11 +78,11 @@
                                             <input type="password" class="form-control" id="password_login" placeholder="Password">
                                         </div>
 
-                                        {{!-- LOGIN BUTTON --}}
-                                        <button type="button" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ;  color: bisque;">Login</button>
+                                         {{!-- LOGIN BUTTON --}}
+                                        <button type="button" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #EE7F52 ;  color: white;">Login</button>
                                         
                                         {{!-- POST NEW USER --}}
-                                        <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ; color: bisque;">Sign Up</button>
+                                        <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #EE7F52; color: white;">Sign Up</button>
                                         </div>
                                     </form>
 
@@ -83,7 +91,7 @@
                         </div>
                     </div>
                     <!--drop down hidden for now-->
-                    <div id ="menu" class="card" style="background-color: #d27254;">
+                    <div id ="menu" class="card" style="background-color:#FBA15F">
                         <div class="card-body">
                             <div class="container col-4" id="genreBox">
                                 <div class="container" id="GsubBox">
@@ -96,19 +104,19 @@
                                                     Select Genre
                                                     </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <div id="idk"><a class="dropdown-item" data-genre="hip_hop" id="hip_hop" >Hip Hop</a></div>
-                                                    <a class="dropdown-item" data-genre="rock" id="rock" >Rock</a>
-                                                    <a class="dropdown-item" data-genre="Rap" id="rap" >Rap</a>
-                                                    <a class="dropdown-item" data-genre="country" id="country" >Country</a>
-                                                    <a class="dropdown-item" data-genre="electronic" id="electronic" >Electronic</a>
-                                                    <a class="dropdown-item" data-genre="trap" id="trap" >Trap</a>
-                                                    <a class="dropdown-item" data-genre="death_metal" id="death_metal" >Death Metal</a>
-                                                    <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" >Classic Rock</a>
-                                                    <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" >Hair Metal</a>
-                                                    <a class="dropdown-item" data-genre="jazz" id="jazz" >Jazz</a>
-                                                    <a class="dropdown-item" data-genre="soul" id="soul" >Soul</a>
-                                                    <a class="dropdown-item" data-genre="reggae" id="reggae" >Reggae</a>
-                                                    <a class="dropdown-item" data-genre="ska" id="ska" >Ska</a>
+                                                    <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
+                                                    <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
+                                                    <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
+                                                    <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
+                                                    <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
+                                                    <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
+                                                    <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
+                                                    <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
+                                                    <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
+                                                    <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
+                                                    <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
+                                                    <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
+                                                    <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
                                                 </div>
                                                 <button id="start_game" type="button" class="btn btn-primary"><a href="/game">Start the Game</a></button>
                                             </div>
@@ -124,6 +132,15 @@
         </div>        
     </div>
 </div>
+          </div>
+      <br>
+      <br>
+
+{{!-- THIRD CARD --}}
+
+
+
+
 
 {{!-- LINKING DEPENDENCIES --}}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -132,10 +149,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#register").click(function(){
-           $( "#dom" ).replaceWith( $( "#side2" ));
-            });
-        });       
-    </script>
+   

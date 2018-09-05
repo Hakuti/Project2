@@ -1,113 +1,149 @@
-<div class="container">
-    <div class="row">
-      <div class="col-12">
-        
-        {{!-- JUMBOTRON HEADING --}}
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container">
-            <h1 class="display-3">Fluid jumbo heading</h1>
-            <p class="lead">Jumbo helper text</p>
-            <button type="button" class="secondary" style="margin-left: 950px; margin-bottom: -10px;">Highscores</button>
-            </p>
-          </div>
+    {{!-- JUMBOTRON HEADING --}}
+    <div class="container">
+    <div class="jumbotron jumbotron-fluid" style="background-color:#F4CC81; border-radius: 15px;" id="shadow">
+      <div class="container">
+        <div id="header">
+        <a href="/" id="logo" >Funker</a>
         </div>
-      </div>   
-    </div>
-
-{{!-- ALBUM ART --}}
-    <div class="row">
-      <div class="col-6">
-        {{!-- FIRST CARD --}}
-       <div cla ss="card bg-dark text-white">
-          <img class="card-img" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/602f4731226337.5646928c3633f.jpg" alt="Card image">
-          <div class="card-img-overlay">
+        <br>
+        <div class="row">
+          <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;" id="shadow"><i class="fas fa-star" id="navhead1"></i><a href="/"  style="color: white; text-decoration: none;"> Highscores</a></button>
+            </div>
+            <br>
+            <div class="col-6">
+          <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px;" id="shadow"><i class="fab fa-github" id="navhead"></i><a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> Github</a></button>
           </div>
-        </div>
+            </div>
+          </div>
+          </div>
+            </div>
       </div>
-  
-      <div class="col-6 ">
-        <div class="card">
-          <div class="card-body">
-            {{!-- HEADING --}}
-            <h4 class="card-title" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">Name that artist!</h4>
-              {{!-- SPOTIFY EMBEDED PLAYER --}}
-                <div class="container"  style=" height:auto; ">
-                  <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="470" height="200" frameborder="0" autoplay="true" allowtransparency="false" allow="encrypted-media"></iframe>
-                  </div>
-                {{!-- <p class="card-text">Text</p> --}}
+    <div class="container" style="background-color:#F4CC81; border-radius: 25px; height: 1000px; width: 800px;" id="shadow">
+    <br>
+
+  {{!-- ALBUM ART --}}
+  <div class="container" style="background-color:#F4CC81;border-radius: 25px; ">
+      <div class="row">
+        <div class="col-6">
+          {{!-- FIRST CARD --}}
+        <div class="card bg-dark text-white">
+            <img class="card-img" src="https://i.scdn.co/image/3d727554b08c9ce5c04b5cf82144150e3291d2fd" alt="Card image">
+            <div class="card-img-overlay">
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-6 ">
+          <div class="card" id="bg" >
+            <div class="card-body"id="bg">
+               
+                     <h4 class="card-title" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">Name that song!</h4>
+                {{!-- SPOTIFY EMBEDED PLAYER --}}
+                  	<div id="wrapper" >
+                      <audio preload="auto" controls>
+                        <source  src="https://p.scdn.co/mp3-preview/8c174ce25d94b502dfe31f0da8a070a32fb263db?cid=5eb1f3410ff949e89b4db31703aca23e" >
+                      </audio>
+                      </div>
+                                  
+          
+              {{!-- HEADING --}}
+           
+                  {{!-- <p class="card-text">Text</p> --}}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-<br>
-  {{!-- SECOND CARD --}}
-  <div class="row">
-      <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <blockquote class="blockquote">
-                {{!-- HEADING --}}
-                <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Points</p>
-                {{!-- POINTS DISPLAY --}}
-                <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
-              </blockquote>
-            </div>
           </div>
-        </div>
-              <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <blockquote class="blockquote">
-                {{!-- HEADING --}}
-                <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Streak</p>
-                {{!-- POINTS DISPLAY --}}
-                <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000</cite></footer>
-              </blockquote>
-            </div>
+      <br>
+      <hr>
+      <div class="container" style="background-color:#F4CC81;  border-radius: 25px; height:500px;" >
+        {{!-- SECOND CARD --}}
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Points</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+                    <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fab fa-gripfire"></i>Streak</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000</cite></footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+                    <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      {{!-- HEADING --}}
+                      <p style="text-align:center; font-size:30px; font-family: 'CaveStoryRegular'; "><i class="fas fa-heart"></i>Lives</p>
+                      {{!-- POINTS DISPLAY --}}
+                      <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
+                    </blockquote>
+                  </div>
+              </div>               
+              </div>         
           </div>
-        </div>
-              <div class="col-4">
-          <div class="card">
-            <div class="card-body">
-              <blockquote class="blockquote">
-                {{!-- HEADING --}}
-                <p style="text-align:center; font-size:35px; font-family: 'CaveStoryRegular'; "><i class="fas fa-trophy"></i>Lives</p>
-                {{!-- POINTS DISPLAY --}}
-                <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';"><cite title="Source title"> 1000000</cite></footer>
-              </blockquote>
-            </div>
-         </div>               
-        </div>         
-    </div>
-    </div>
-<br>
-<br>
+      <br>
+      <br>
 
 {{!-- THIRD CARD --}}
 
 
 
 {{!-- ANSWER PLACEHOLDER --}}
-    <div class="container">
-    <div class="row">
-      {{!-- ANSWER 1 --}}
-         {{!-- The Answer Buttons --}}
-  <div class="col align-self-center">
-    <div class="container" id="answerBox">
+<div class="container">
+<div class="row">
+  {{!-- ANSWER 1 --}}
+      {{!-- The Answer Buttons --}}
+
+      <div class="navbox-tiles">
+        <div class="row">
+          <div class="col-6">
+            <a href="#" class="tile" style="float: right;" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Home</span>
+            </a>
+            </div>
+            <br>
+            <div class="col-6">
+            <a href="#" class="tile" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Calendar</span>
+            </a>
+          </div>
+          </div>
+          <br>
+          
       <div class="row">
-        <div id="btn1" class="offset-2 col-4"> <a class="push_button blue" href="#">Answer A </a>
-          <a class="push_button blue" href="#">Answer B </a>
+          <div class="col-6">
+          <a href="#" class="tile" style="float: right;" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Email</span>
+            </a>
+            </div>
+            <div class="col-6">
+            <a href="#" class="tile" id="shadow">
+              <div class="icon"><i class="fas fa-question" id="fa-question"></i></div>
+              <span class="title" style="font-size: 20px;">Photos</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+          
         </div>
-        <div id="btn3" class="col-4"> <a class="push_button blue" href="#">Answer C </a>
-          <a class="push_button blue" href="#">Answer D </a>
-        </div>
-      </div>
-    </div>
-{{!-- END-GAME BUTTON --}}
-    <div class="row">
-      <div class="col-12">
-        <br>
-        <br>
-        <button type="button" class="btn btn-dark-outline" style="margin-left: 950px;">End Game</button>
-      </div>
-    </div>
+
