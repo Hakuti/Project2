@@ -9,10 +9,11 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
-    if (req.user) {
+    /*if (req.user) {
       //if the user is already logged in send them to the pregame page to select a genre and start the game
-      res.redirect("/pregame");
+      res.redirect("/game");
     } //otherwise send them to index to login or signup
+    */
       res.render("index");
   });
 
