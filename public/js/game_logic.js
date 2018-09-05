@@ -6,7 +6,18 @@ $(document).ready(function(){
         var genre = $(this).attr("data-genre");
         console.log(genre);
         //now lets pass this data somewhere that matters
+        //when the start button
+        $("#start_game").on("click", function(){
+            console.log("hello " + genre);
+            launch(genre);
+        })
     });
+
+    function launch(test){
+        console.log("eyy " + test);
+        $.get("/api/game", {genre: test});
+    }
+
 
 })
 

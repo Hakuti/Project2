@@ -17,11 +17,15 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.get("/api/game", function(req, res) {
+    //select all the artists from the db of the genre selected on the dropdown
+      db.artists.findAll({
+        where: {genre: req.body.genre}
+      }).then(function(dbartists){
+        res.json(dbartists);
+      })
     });
-  });
+
 
   // query spotify for all the artists related to selected genre
   app.get("/api", function(req, res) {
