@@ -15,7 +15,12 @@ $(document).ready(function(){
 
     function launch(test){
         console.log("eyy " + test);
-        $.get("/api/game", {genre: test});
+        console.log(test);
+        $.get("/api", {
+            temp: test
+        } ).then(function(data){
+            console.log(data);
+        });
     }
 
 
