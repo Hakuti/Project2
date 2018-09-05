@@ -11,16 +11,13 @@ $(document).ready(function(){
             console.log("hello " + genre);
             //send the genre as a route param; /api/game/:genre
             launch(genre);
-            
-            
         })
     });
 
     function launch(test){
-        localStorage.setItem("genre",req.body.genre);
-        //retrieve
-        document.getElementById("result").innerHTML =
-        localStorage.getItem("genre")
+        //just locally storing the genre that was selected by the user
+        //will be accessed on game launch on next page
+        localStorage.setItem("genre", test);
         console.log("stored");
     }
 
