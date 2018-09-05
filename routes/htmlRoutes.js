@@ -18,13 +18,9 @@ module.exports = function(app) {
   });
 
   //route to the game page
-  app.get("/game", function(req, res) {
-    /*if (req.user) {
-      res.redirect("/game");
-    }*/
-      res.render("game");
-  });
-
+  app.get("/game", function(req, res){
+    res.render("game");
+  })
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
