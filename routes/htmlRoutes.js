@@ -9,33 +9,28 @@ module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
+    /*if (req.user) {
+      //if the user is already logged in send them to the pregame page to select a genre and start the game
+      res.redirect("/game");
+    } //otherwise send them to index to login or signup
+    */
       res.render("index");
   });
+
+  //route to the game page
   app.get("/game", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
+    /*if (req.user) {
+      res.redirect("/game");
+    }*/
       res.render("game");
   });
 
-  app.get("/login", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/members");
-    }
-    res.sendFile(path.join(__dirname, "../"));
-  });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+  app.get("/pregame", isAuthenticated, function(req, res) {
+    res.render("pregame")
   });
-
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

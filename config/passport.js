@@ -11,7 +11,11 @@ passport.use(new LocalStrategy(
   },*/
   function(username, password, done) {
     // When a user tries to sign in this code runs
-    db.User.findOne({username: username}).then(function(dbUser) {
+    db.User.findOne({
+      where: {
+        username: username
+      }
+    }).then(function(dbUser) {
       // If there's no user with the given email
       if (!dbUser) {
         return done(null, false, {
