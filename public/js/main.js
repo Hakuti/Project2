@@ -31,11 +31,11 @@
 
   console.log("ran ");
   
-  $("#genreBox").hide();
+  $("#menu").hide();
 
   $(".switch").on("click",function(){
     $("#switch1").hide();
-    $("#genreBox").show();   
+    $("#menu").show();   
   });
   
 })(jQuery);
