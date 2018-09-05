@@ -4,13 +4,10 @@ var myspotify = require("../public/js/spotifySearch.js");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
-  app.get("/api/:genre", function(req, res) {
-    db.artists.findAll({}).then(result => console.log(result[1].artist_name));
-    //myspotify.mySpotify("chance the rapper");
-  });
+  
 
   // Get all examples
-  app.get("/api/examples", function(req, res) {
+  app.post("/api/examples", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
       res.json(dbExamples);
     });
@@ -18,19 +15,23 @@ module.exports = function(app) {
 
 
   // query spotify for all the artists related to selected genre
-  app.get("/api", function(req, res) {
-    db.artists.findAll({
-      where: {genre: "Rap"}//req.body.genre}
-    }).then(function(dbartists) {
-      res.json(dbartists);
-
-      //need to loop over dbartists and grab the artists' names then query spotify
-      //for each and grab the song preview, album art for each
-      for(var i =0; i < dbartists.length; i++){
-        myspotify.mySpotify(dbartists[i].artist_name);
-      }
-    })
+  app.post("/api", function(req, res) {
+    console.log(req.body.genre);
+    
+    
   });
+
+  app.post("api/game", function(req, res) {
+    /*if (req.user) {
+      res.redirect("/game");
+    }*/
+    console.log("html routin");
+  }).then(function(){
+    res.redirect(307, "/game");
+  })
+
+
+  
 
   //routes for the user authentication / login
   //====================================================

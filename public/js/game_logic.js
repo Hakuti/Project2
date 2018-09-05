@@ -9,23 +9,20 @@ $(document).ready(function(){
         //when the start button
         $("#start_game").on("click", function(){
             console.log("hello " + genre);
+            //send the genre as a route param; /api/game/:genre
             launch(genre);
+            _launch();
             
         })
     });
 
     function launch(test){
-        console.log("eyy " + test);
-        console.log(test);
-        $.get("/api", {
-            genre: test
-        } ).then(function(data){
-            console.log(data);
-        });
+        localStorage.setItem("genre",req.body.genre);
+        //retrieve
+        document.getElementById("result").innerHTML =
+        localStorage.getItem("genre")
     }
 
-
-})
-
+});
 
 
