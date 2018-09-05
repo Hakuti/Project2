@@ -1,11 +1,10 @@
 $(document).ready(function() {
   // Getting references to our form and input
-  var signUpForm = $("form.signup");
-  var usernameInput = $("input#username_new");
-  var passwordInput = $("input#password_new");
+  var usernameInput = $("input#username_login");
+  var passwordInput = $("input#password_login");
 
   // When the signup button is clicked, we validate the username and password are not blank
-  $("#signup_btn").on(function() {
+  $("#signup_btn").on("click",function() {
     var userData = {
       username: usernameInput.val().trim(),
       password: passwordInput.val().trim()

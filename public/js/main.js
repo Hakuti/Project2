@@ -30,4 +30,6 @@
     
 
   console.log("ran ");
+
+  
 })(jQuery);
