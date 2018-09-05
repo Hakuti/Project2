@@ -30,6 +30,12 @@
     
 
   console.log("ran ");
+  
+  $("#genreBox").hide();
 
+  $(".switch").on("click",function(){
+    $("#switch1").hide();
+    $("#genreBox").show();   
+  });
   
 })(jQuery);
