@@ -5,6 +5,7 @@ var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
 var db = require("./models");
+var signale = require('signale');
 //require("./public/js/spotifySearch.js")
 
 var app = express();
@@ -14,6 +15,7 @@ var PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
+
 // We need to use sessions to keep track of our user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
@@ -43,11 +45,7 @@ if (process.env.NODE_ENV === "test") {
 // Starting the server, syncing our models ------------------------------------/
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
+    signale.success("Server is listening on localhost!:" + PORT);
   });
 });
 
