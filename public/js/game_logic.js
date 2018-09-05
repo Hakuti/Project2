@@ -2,6 +2,7 @@
 //jquery grab drop menu genre selection then ajax 
 $(".dropdown-item").on("click",function(){
     var genre = $(this).attr("data-genre");
+    console.log(genre);
 });
 
-console.log(genre);
+
