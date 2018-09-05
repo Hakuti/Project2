@@ -5,6 +5,7 @@ $(document).ready(function(){
     $(".dropdown-item").on("click",function(){
         var genre = $(this).attr("data-genre");
         console.log(genre);
+        //now lets pass this data somewhere that matters
     });
 
 })
