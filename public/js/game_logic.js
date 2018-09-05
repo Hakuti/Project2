@@ -21,6 +21,7 @@ $(document).ready(function(){
         //retrieve
         document.getElementById("result").innerHTML =
         localStorage.getItem("genre")
+        console.log("stored");
     }
 
 });
