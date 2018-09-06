@@ -1,35 +1,32 @@
 $(document).ready(function() {
-
-  
   $("#start_modal").modal("show");
 
-  $("#launch_game").on("click", function(){
+  $("#launch_game").on("click", function() {
+    let nextQuestionCounter = 0;
+    let livesLeft = 3;
+    let priorHighStreak = 0;
+    let streak = 0;
+    let basePoints = 5;
+    let totalPoints = 0;
 
-  
-  let nextQuestionCounter = 0;
-  let livesLeft = 3;
-  let priorHighStreak = 0;
-  let streak = 0;
-  let basePoints = 5;
-  let totalPoints = 0;
+    var totalTime = 0;
+    var aVar;
 
-  var totalTime = 0;
-  var aVar;
+    //function startTimer() {
+    var startTimestamp = moment().startOf("day");
+    function startTimer() {
+      aVar = setInterval(function() {
+        startTimestamp.add(1, "second");
+        //document.getElementById('timer').innerHTML =
+        //  startTimestamp.format('HH:mm:ss');
+        //console.log(startTimestamp.format('s'));
+        totalTime = startTimestamp.format("s");
+        console.log(totalTime);
+      }, 1000);
+    }
+    startTimer();
 
-  //function startTimer() {
-  var startTimestamp = moment().startOf("day");
-  function startTimer() {
-    aVar = setInterval(function() {
-      startTimestamp.add(1, "second");
-      //document.getElementById('timer').innerHTML =
-      //  startTimestamp.format('HH:mm:ss');
-      //console.log(startTimestamp.format('s'));
-      totalTime = startTimestamp.format("s");
-      console.log(totalTime);
-    }, 1000);
-  }
-
-  /*
+    /*
     for (let i = 0; i < 4; i++) {
     $(".tile")
       .eq(i)
@@ -37,148 +34,184 @@ $(document).ready(function() {
       .text(arrayThis[i]);
   }
     */
-
-  $.get("/api/game/pop").then(function(data) {
-    var randomData = takeDataArtistData(data);
-
-    var tempArray = [];
-    //This is the initial first correct Answer
-    let correctAnswerObject = randomData[0];
-    let correctAnswer = randomData[0].song_name;
-    let tempShuffled = findDuplicates(randomData, correctAnswer);
-    //This is the initial first album image
-    $(".card-img").attr("src", randomData[0].album_image_url);
-    change(randomData[0].song_url);
-
-    //This pushes text into the buttons from the temporary array: tempArray
-    //   for (let i = 0; i < 4; i++) {
-    //     $(".btn").eq(i).text(tempShuffled[i]);
-    //   }
-    for (let i = 0; i < 4; i++) {
-      $(".tile")
-        .eq(i)
-        .find("i")
-        .text(tempShuffled[i]);
-    }
-
-    //console.log(correctAnswer);
-    //When it's new random Data
-    //startTimer();
-
-    $(".tile").on("click", function() {
-      event.preventDefault();
-
-      clearInterval(aVar);
-      console.log(totalTime);
-      //console.log(nextQuestionCounter);
-
-      //When the answer is correct
-      if ($(this).text() == correctAnswer) {
-        //By incrementing the counter I'm acknowleding there is a new question
-
-        nextQuestionCounter++;
-        let nextQuestion = randomData[nextQuestionCounter];
-
-        //Assign a new correctAnswer
-        console.log(correctAnswer);
-        correctAnswer = nextQuestion.song_name;
-        //correctAnswerObject = nextQuestion[]
-        //modify the img and audio src
-        $(".card-img").attr("src", nextQuestion.album_image_url);
-        // setTimeout(() => {
-        change(nextQuestion.song_url);
-        //}, 2000
-        //)
-        //console.log(nextQuestion.song_url);
-        console.log(correctAnswer);
-        console.log(nextQuestion.song_name);
-        //Reset the temporary array
-        tempArray = [];
-
-        let tempShuffled = findDuplicates(randomData, correctAnswer);
-        //console.log(tempArray);
-        console.log(tempArray);
-        for (let i = 0; i < 4; i++) {
-          $(".tile")
-            .eq(i)
-            .find("i")
-            .text(tempShuffled[i]);
-        }
-        //   for (let i = 0; i < 4; i++) {
-        //     $(".btn").eq(i).text(tempShuffled[i]);
-        //   }
-        streak++;
-        console.log("Current Streak: " + streak);
-        totalPoints = calculatePointsPerRound(
-          totalPoints,
-          basePoints,
-          streak,
-          totalTime
-        );
-        console.log(totalPoints);
-        console.log("Timer here: " + totalTime);
-        totalTime = 0;
-        console.log("Time after reassign: " + totalTime);
-        //startTimer();
-        resetInterval();
-
-        //multiplier = 0;
-      } else {
-        nextQuestionCounter++;
-        let nextQuestion = randomData[nextQuestionCounter];
-
-        //Assign a new correctAnswer
-        console.log(correctAnswer);
-        correctAnswer = nextQuestion.song_name;
-        //correctAnswerObject = nextQuestion[]
-        //modify the img and audio src
-        $(".card-img").attr("src", nextQuestion.album_image_url);
-        // setTimeout(() => {
-
-        change(nextQuestion.song_url);
-        //}, 2000
-        //)
-        //console.log(nextQuestion.song_url);
-        console.log(correctAnswer);
-        console.log(nextQuestion.song_name);
-        //Reset the temporary array
-        tempArray = [];
-
-        let tempShuffled = findDuplicates(randomData, correctAnswer);
-        //console.log(tempArray);
-        console.log(tempArray);
-        for (let i = 0; i < 4; i++) {
-          $(".tile")
-            .eq(i)
-            .find("i")
-            .text(tempShuffled[i]);
-        }
-        //   for (let i = 0; i < 4; i++) {
-        //     $(".btn").eq(i).text(tempShuffled[i]);
-        //   }
-
-        multiplier = 0;
-        livesLeft--;
-        priorHighStreak = checkIfNewHighStreak(streak, priorHighStreak);
-        console.log(priorHighStreak);
-        streak = 0;
-        console.log(livesLeft);
-        if (livesLeft == 0) {
-          console.log("You lost");
-          $("#finish_modal").modal("show");
-
-          //$("#goingPost".on(""))
-          //send data to server of your points and streaks
-          //Prompt a modal that cannot be dismissed
-          //This modal contain several elements
-          //P1, P2, P3 or whatever it may be
-          //Append Streak, Points and average time it took to answer songs
-        }
+    $("#myAudio").on("timeupdate", function() {
+      if (this.currentTime >= 10) {
+        this.pause();
       }
     });
 
-  });
+    $.get("/api/game/pop").then(function(data) {
+      var randomData = takeDataArtistData(data);
 
+      var tempArray = [];
+      //This is the initial first correct Answer
+      let correctAnswerObject = randomData[0];
+      let correctAnswer = randomData[0].song_name;
+      let tempShuffled = findDuplicates(randomData, correctAnswer);
+      //This is the initial first album image
+      $(".card-img").attr("src", randomData[0].album_image_url);
+      change(randomData[0].song_url);
+
+      //This pushes text into the buttons from the temporary array: tempArray
+      //   for (let i = 0; i < 4; i++) {
+      //     $(".btn").eq(i).text(tempShuffled[i]);
+      //   }
+      for (let i = 0; i < 4; i++) {
+        $(".tile")
+          .eq(i)
+          .find("i")
+          .text(tempShuffled[i]);
+      }
+
+      $("#pointsTitle")
+        .eq(0)
+        .text(totalPoints);
+
+      $("#streakTitle")
+        .eq(0)
+        .text(streak);
+      $("#livesTitle")
+        .eq(0)
+        .text(livesLeft);
+
+      //console.log(correctAnswer);
+      //When it's new random Data
+      //startTimer();
+
+      $(".tile").on("click", function() {
+        event.preventDefault();
+
+        clearInterval(aVar);
+        console.log(totalTime);
+        //console.log(nextQuestionCounter);
+
+        //When the answer is correct
+        if (
+          $(this)
+            .find("i")
+            .text() == correctAnswer
+        ) {
+          //By incrementing the counter I'm acknowleding there is a new question
+
+          nextQuestionCounter++;
+          let nextQuestion = randomData[nextQuestionCounter];
+
+          //Assign a new correctAnswer
+          console.log(correctAnswer);
+          correctAnswer = nextQuestion.song_name;
+          //correctAnswerObject = nextQuestion[]
+          //modify the img and audio src
+          $(".card-img").attr("src", nextQuestion.album_image_url);
+          // setTimeout(() => {
+          change(nextQuestion.song_url);
+          //}, 2000
+          //)
+          //console.log(nextQuestion.song_url);
+          console.log(correctAnswer);
+          console.log(nextQuestion.song_name);
+          //Reset the temporary array
+          tempArray = [];
+
+          let tempShuffled = findDuplicates(randomData, correctAnswer);
+          //console.log(tempArray);
+          console.log(tempArray);
+          for (let i = 0; i < 4; i++) {
+            $(".tile")
+              .eq(i)
+              .find("i")
+              .text(tempShuffled[i]);
+          }
+          //   for (let i = 0; i < 4; i++) {
+          //     $(".btn").eq(i).text(tempShuffled[i]);
+          //   }
+          streak++;
+          $("#streakTitle")
+            .eq(0)
+            .text(streak);
+          console.log("Current Streak: " + streak);
+          totalPoints = calculatePointsPerRound(
+            totalPoints,
+            basePoints,
+            streak,
+            totalTime
+          );
+          $("#pointsTitle")
+            .eq(0)
+            .text(totalPoints);
+          console.log(totalPoints);
+          console.log("Timer here: " + totalTime);
+          totalTime = 0;
+          console.log("Time after reassign: " + totalTime);
+          //startTimer();
+          resetInterval();
+
+          //multiplier = 0;
+        } else {
+          nextQuestionCounter++;
+          let nextQuestion = randomData[nextQuestionCounter];
+
+          //Assign a new correctAnswer
+          console.log(correctAnswer);
+          correctAnswer = nextQuestion.song_name;
+          //correctAnswerObject = nextQuestion[]
+          //modify the img and audio src
+          $(".card-img").attr("src", nextQuestion.album_image_url);
+          // setTimeout(() => {
+
+          change(nextQuestion.song_url);
+          //}, 2000
+          //)
+          //console.log(nextQuestion.song_url);
+          console.log(correctAnswer);
+          console.log(nextQuestion.song_name);
+          //Reset the temporary array
+          tempArray = [];
+
+          let tempShuffled = findDuplicates(randomData, correctAnswer);
+          //console.log(tempArray);
+          console.log(tempArray);
+          for (let i = 0; i < 4; i++) {
+            $(".tile")
+              .eq(i)
+              .find("i")
+              .text(tempShuffled[i]);
+          }
+          //   for (let i = 0; i < 4; i++) {
+          //     $(".btn").eq(i).text(tempShuffled[i]);
+          //   }
+
+          multiplier = 0;
+          livesLeft--;
+          $("#livesTitle")
+            .eq(0)
+            .text(livesLeft);
+          priorHighStreak = checkIfNewHighStreak(streak, priorHighStreak);
+          console.log(priorHighStreak);
+          streak = 0;
+          $("#streakTitle")
+            .eq(0)
+            .text(streak);
+          console.log(livesLeft);
+          if (livesLeft == 0) {
+            console.log("You lost");
+            $("#myAudio")[0].pause();
+            //audio[0].pause;
+            //$("#finish_modal").modal("show");
+            $("#finish_modal").modal({
+              backdrop: "static",
+              keyboard: false
+            });
+
+            //$("#goingPost".on(""))
+            //send data to server of your points and streaks
+            //Prompt a modal that cannot be dismissed
+            //This modal contain several elements
+            //P1, P2, P3 or whatever it may be
+            //Append Streak, Points and average time it took to answer songs
+          }
+        }
+      });
+    });
   });
 
   function resetInterval() {
@@ -297,8 +330,3 @@ function change(sourceUrl) {
 //     .find("i")
 //     .text(arrayThis[i]);
 // }
-
-
-
-
-

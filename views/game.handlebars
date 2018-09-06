@@ -112,7 +112,7 @@
                 <i class="fas fa-trophy"></i>Points</p>
               {{!-- POINTS DISPLAY --}}
               <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">
-                <cite title="Source title"> 1000000</cite>
+                <cite id="pointsTitle" title="Source title"> 1000000</cite>
               </footer>
               {{!-- end points display --}}
             </blockquote>
@@ -135,7 +135,7 @@
                 <i class="fab fa-gripfire"></i>Streak</p>
               {{!-- POINTS DISPLAY --}}
               <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">
-                <cite title="Source title"> 1000</cite>
+                <cite id="streakTitle" title="Source title"> 1000</cite>
               </footer>
               {{!-- end display --}}
             </blockquote>
@@ -158,7 +158,7 @@
                 <i class="fas fa-heart"></i>Lives</p>
               {{!-- POINTS DISPLAY --}}
               <footer class="card-blockquote" style="text-align:center; font-size:50px; font-family: 'CaveStoryRegular';">
-                <cite title="Source title"> 1000000</cite>
+                <cite id="livesTitle" title="Source title"> 1000000</cite>
               </footer>
               {{!-- end live display --}}
             </blockquote>
@@ -236,41 +236,68 @@
       </div>
       {{!-- end row --}}
     </div>
-    {{!-- end container --}}
-    
-
-    {{!-- start game modal --}}
+    {{!-- end container --}} {{!-- start game modal --}}
     <div id="start_modal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="row justify-content-center" > 
-            <div id="modal_p" class="col-8"> 
-              <p>Guess what song is playing as fast as you can! The faster you guess, the more points you will earn. The Song will only play ten seconds, and there is no replay!</p>
+          <div class="row justify-content-center">
+            <div id="modal_p" class="col-8">
+              <h3>Guess what song is playing as fast as you can! The faster you guess, the more points you will earn. The
+                Song will only play ten seconds, and there is no replay!</h3>
               <p>Choose wisely though, incorrect guesses will cost you a life and you only get 3 lives.</p>
             </div>
           </div>
           <!--next row-->
-          <div id="modal_r" class="row justify-content-center" >  
+          <div id="modal_r" class="row justify-content-center">
             <button id="launch_game" type="button" class="btn btn-secondary" data-dismiss="modal">Start Game</button>
-          </div>  
+          </div>
         </div>
       </div>
     </div>
-    {{!-- end start modal--}}
-    
-    {{!-- finish modal --}}
+    {{!-- end start modal--}} {{!-- finish modal --}}
     <div id="finish_modal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="row justify-content-center" > 
-            <div id="modal_p" class="col-8"> 
+          <div class="row justify-content-center">
+            <div id="modal_p" class="col-8">
               <p>Your score </p>
             </div>
           </div>
           <!--next row-->
-          <div id="modal_r" class="row justify-content-center" >  
-            <button id="game_over" type="button" class="btn btn-secondary" data-dismiss="modal">exit</button>
-          </div>  
+          <div id="modal_r" class="row justify-content-center">
+            <div class="modal-body">
+
+              <div class="row">
+                <div class="bg-primary d-flex justify-content-center col-lg-12">
+                  {{!--
+                  <div class="h-25"> --}}
+                    <h1>Let's see how you did!!!</h1>
+                    {{!--
+                  </div> --}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <h1>Points</h1>
+                </div>
+                <div class="col-lg-4">
+                  <h1>Streak</h1>
+                </div>
+                <div class="col-lg-4">
+                  <h1>Average Answer Time</h1>
+                </div>
+
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6 d-flex justify-content-center">
+                  <button id="game_over" type="button" class="btn btn-secondary" data-dismiss="modal">exit</button>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>

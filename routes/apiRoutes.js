@@ -37,6 +37,26 @@ module.exports = function(app) {
       });
   });
 
+  app.get("/api/highscore", function(req, res) {
+    //console.log(req.body.genre);
+    db.User.findAll({
+      order: ["scores"]
+    }).then(result => {
+      res.json(result);
+    });
+    // db.User.findAll({
+    //   scores: ["scores", "DESC"]
+    // }).then(result => {
+    //   console.log(result.length);
+    //   console.log(result);
+    //   res.json(result);
+    //   // for (var i = 1; result.length; i++) {
+    //   //   //myspotify.mySpotify(result[i].artists, result[i].genre);
+    //   //   //InHere spotifySearch is an insert statement
+    //   // }
+    // });
+  });
+
   //routes for the user authentication / login
   //====================================================
   // Using the passport.authenticate middleware with our local strategy.
