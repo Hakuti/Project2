@@ -73,13 +73,12 @@ audio{
       -moz-box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
       box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.15);
  }
-      .list a:hover span {
-        left: 8px;
-        -webkit-transition: all 0.2s ease-out;
-                transition: all 0.2s ease-out;
-      }
-  .list li {
-   }
+  .list a:hover span {
+    left: 8px;
+    -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+  }
+  
    #hs1, #hs2, #hs3, #hs4, #hs5, #hs6, #hs7, #hs8, #hs9, #hs10 {
    
       border-bottom: 2px solid #F4CC81;
@@ -327,4 +326,12 @@ audio{
     font-size: 11px;
   }
   
+  }
+
+  #modal_p {
+    padding: 20px;
+  }
+
+  #modal_r {
+    padding: 20px;
   }
