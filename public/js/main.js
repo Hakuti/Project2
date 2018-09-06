@@ -32,11 +32,15 @@
 
   console.log("ran ");
   //the dropdown menu starts out hidden
-  $("#menu").hide();
-  //on a button click the dropdown menu and start button are shown and the login/signup is hidden
-  $(".switch").on("click",function(){
-    $("#switch1").hide();
-    $("#menu").show();   
-  });
-  
+   //the dropdown menu starts out hidden
+   $("#menu").hide();
+   //on a button click the dropdown menu and start button are shown and the login/signup is hidden
+   
+   $(".switch").on("click",function(){
+     if($("#username_login").val() != "" && $("#password_login").val() != ""){
+     $("#switch1").hide();
+     $("#menu").show();   
+     }
+   });
+ 
 })(jQuery);
