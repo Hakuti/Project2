@@ -1,8 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "pwnage123",
-    "database": "testdb",
+    "database": "burger_db",
     "host": "localhost",
     "port": 3306,
     "dialect": "mysql"
