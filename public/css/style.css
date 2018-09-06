@@ -1,5 +1,5 @@
 /* HIGHSCORES LIST  */
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
 
 /* BODY */
 body {
@@ -12,7 +12,7 @@ body {
 
 /* BG COLOR */
 #bg {
-  background-color: #F4CC81;
+  background-color: #f4cc81;
   background-repeat: no-repeat;
   border-style: hidden;
 }
@@ -27,7 +27,7 @@ body {
 /* ANSWER BOX ICONS */
 #fa-question {
   margin-top: 20px;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 /* ICONS */
@@ -42,8 +42,8 @@ body {
 /* END ICONS */
 /* LOGO STYLING */
 #logo {
-  font-family: 'Orbitron', sans-serif;
-  color: #EE7F52;
+  font-family: "Orbitron", sans-serif;
+  color: #ee7f52;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 150px;
@@ -73,7 +73,7 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   color: #fefefe;
-  background-color: #EE7F52;
+  background-color: #ee7f52;
   /* border-style: groove;  */
   border-radius: 3px;
 }
@@ -90,7 +90,8 @@ body {
   transition: all 0.2s ease-out;
 }
 
-.list li {}
+.list li {
+}
 
 #hs1,
 #hs2,
@@ -102,7 +103,7 @@ body {
 #hs8,
 #hs9,
 #hs10 {
-  border-bottom: 2px solid #F4CC81;
+  border-bottom: 2px solid #f4cc81;
 }
 
 #access li {
@@ -113,7 +114,7 @@ body {
 /* HIGHSCORES */
 /* BACKGROUND */
 #hsBox {
-  background-color: #F4CC81;
+  background-color: #f4cc81;
   border: #a5494d;
   /* border-style: groove; */
   border-radius: 5px;
@@ -127,7 +128,7 @@ body {
 
 /* HEADING */
 #hsHead {
-  background-color: #F4CC81;
+  background-color: #f4cc81;
   border: #a5494d;
   /* border-style: groove; */
   color: black;
@@ -139,7 +140,7 @@ body {
 
 /* SIGN IN BACKGROUND */
 #subBox {
-  background-color: #EE7F52;
+  background-color: #ee7f52;
   border: #a5494d;
   color: bisque;
   border-style: groove;
@@ -151,7 +152,7 @@ body {
 
 /* SIGN IN HEADING */
 #infoHead {
-  background-color: #F4CC81;
+  background-color: #f4cc81;
   border: #a5494d;
   color: black;
   /* border-style: groove; */
@@ -180,7 +181,7 @@ body {
 
 .navbox-tiles .tile {
   display: block;
-  background-color: #EE7F52;
+  background-color: #ee7f52;
   width: 70.3030303030303%;
   height: 70%;
   padding-bottom: 29%;
@@ -224,11 +225,11 @@ body {
   text-decoration: none;
 }
 
-.navbox-tiles .tile:not(:nth-child(3n+3)) {
+.navbox-tiles .tile:not(:nth-child(3n + 3)) {
   margin-right: 4.54545454545455%;
 }
 
-.navbox-tiles .tile:nth-child(n+4) {
+.navbox-tiles .tile:nth-child(n + 4) {
   margin-top: 15px;
 }
 
