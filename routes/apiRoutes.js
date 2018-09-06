@@ -4,8 +4,6 @@ var myspotify = require("../public/js/spotifySearch.js");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
-  
-
   // Get all examples
   app.post("/api/examples", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
@@ -13,17 +11,31 @@ module.exports = function(app) {
     });
   });
 
-
   // query spotify for all the artists related to selected genre
-  app.post("/api", function(req, res) {
-    console.log(req.body.genre);
-    
-    
+  app.get("/api/game/:genre", function(req, res) {
+    //console.log(req.body.genre);
+
+    db.artists
+      .findAll({
+        where: {
+          genre: {
+            $like: "%" + req.params.genre
+          },
+          song_url: {
+            $ne: null
+          }
+        }
+      })
+      .then(result => {
+        console.log(result.length);
+        console.log(result);
+        res.json(result);
+        // for (var i = 1; result.length; i++) {
+        //   //myspotify.mySpotify(result[i].artists, result[i].genre);
+        //   //InHere spotifySearch is an insert statement
+        // }
+      });
   });
-
-  
-
-  
 
   //routes for the user authentication / login
   //====================================================
@@ -35,8 +47,7 @@ module.exports = function(app) {
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
     // They won't get this or even be able to access this page if they aren't authed
     //res.json("/members");
-
-    //actually don't reroute to anywhere, the login is noted in the db and then the login/signup box is 
+    //actually don't reroute to anywhere, the login is noted in the db and then the login/signup box is
     //replaced with a drop down menu
   });
 
@@ -48,13 +59,15 @@ module.exports = function(app) {
     db.User.create({
       username: req.body.username,
       password: req.body.password
-    }).then(function() {
-      res.redirect(307, "/api/login");
-    }).catch(function(err) {
-      console.log(err);
-      res.json(err);
-      // res.status(422).json(err.errors[0].message);
-    });
+    })
+      .then(function() {
+        res.redirect(307, "/api/login");
+      })
+      .catch(function(err) {
+        console.log(err);
+        res.json(err);
+        // res.status(422).json(err.errors[0].message);
+      });
   });
 
   // Route for logging user out
@@ -68,8 +81,7 @@ module.exports = function(app) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
-    }
-    else {
+    } else {
       // Otherwise send back the user's username and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
@@ -78,6 +90,4 @@ module.exports = function(app) {
       });
     }
   });
-
-  
 };

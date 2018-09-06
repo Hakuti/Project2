@@ -1,141 +1,301 @@
-<!--<div class="container">
-<div class="row">
-    <div class="col-12">
-    {{!-- JUMBOTRON HEADING --}}
-    <div class="jumbotron jumbotron-fluid" style="background-color: 	#535353;">
+ {{!-- JUMBOTRON HEADING --}} {{!-- container for jumbotron --}}
+<div class="container" style="width: 1200px;">
+    {{!-- div for jumbotron --}}
+    <div class="jumbotron jumbotron-fluid" style="background-color:#F4CC81; border-radius: 15px;" id="shadow">
+        {{!-- container for heading and nav --}}
         <div class="container">
-        <h1 class="display-3">Fluid jumbo heading</h1>
-        <p class="lead">Jumbo helper text</p>
-        <a class="btn btn-large btn-block" href="/game" role="button" style="width: 750px; height: 75px; margin-left: 175px; font-size:40px; 
-        background-color: #a5494d;  color: bisque;">Game</a>
-        </p>
-        </div>
-    </div>
-</div>-->   
-
-{{!-- MAIN CONTAINER --}}
-<div class="container">
-    {{!-- CARD 1 BACKGROUND COLOR  --}}
-        <div class="card" style="background-color: #e5a267 ;">
-            {{!-- FIRST CARD --}}
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <p class="card-text">Text</p>
-                <div class="row align-items-start">
-                    <div class="container col-4" id="">
-                        {{!-- HIGHSCORES CARD BG COLOR --}}
-                        <div class="card" style="background-color: #d27254;">
-                            {{!-- HIGHSCORES --}}
-                            <img class="card-img-top" src="holder.js/100x180/" alt="">
-                            <div class="card-body" id="hsBox">
-                                <h2 id="hsHead"> <span><strong> High Scores </strong></span></h2>
-                                <div class="list" id="tcolor">
-                                    <div id="hs1"><a><span><strong> Player </strong> 1 </span></a></div>
-                                    <div id="hs2"><a><span><strong> Player </strong> 2 </span></a></div>
-                                    <div id="hs3"><a><span><strong> Player </strong> 3 </span></a></div>
-                                    <div id="hs4"><a><span><strong> Player </strong> 4 </span></a></div>
-                                    <div id="hs5"><a><span><strong> Player </strong> 5 </span></a></div>
-                                    <div id="hs6"><a><span><strong> Player </strong> 6 </span></a></div>
-                                    <div id="hs7"><a><span><strong> Player </strong> 7 </span></a></div>
-                                    <div id="hs8"><a><span><strong> Player </strong> 8 </span></a></div>
-                                    <div id="hs9"><a><span><strong> Player </strong> 9 </span></a></div>
-                                    <div id="hs10"><a><span><strong> Player </strong> 10 </span></a></div>
-                                </div>
-                            </div>
-                        </div>   
-                    </div>
-                
-
-                    {{!--SECOND CARD ------
-                    -       LOGIN FORM           -
-                    ---------------------------------}}
-                    <div class="container col-4" id="switch1">
-                        <div class="card" style="background-color: #d27254;">
-                            <div class="card-body">
-                                <div class="container" id="side1">
-
-                                        {{!-- HEADING --}}
-                                    <h2 id="infoHead"> <span><strong> Player Sign In </strong></span></h2>
-                                    <form id="theForm">
-
-                                        {{!-- USERNAME INPUT --}}
-                                        <div class="form-group">
-                                            <label for="playerId"> <span><strong> Username </strong></span></label>
-                                            <input type="text" class="form-control" id="username_login" aria-describedby="username" placeholder="Enter User Name">
-                                        </div>
-                                        <div id="dom">
-                                        {{!-- PASSWORD INPUT --}}
-                                        <div class="form-group">
-                                            <label for="Password"> <span><strong> Password </strong></span></label>
-                                            <input type="password" class="form-control" id="password_login" placeholder="Password">
-                                        </div>
-
-                                        {{!-- LOGIN BUTTON --}}
-                                        <button type="button" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ;  color: bisque;">Login</button>
-                                        
-                                        {{!-- POST NEW USER --}}
-                                        <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #a5494d ; color: bisque;">Sign Up</button>
-                                        </div>
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--drop down hidden for now-->
-                    <div id ="menu" class="card" style="background-color: #d27254;">
-                        <div class="card-body">
-                            <div class="container col-4" id="genreBox">
-                                <div class="container" id="GsubBox">
-                                    <h2 id="genreHead"> <span><strong>Pick Your Favorite Genre </strong></span></h2>
-                                    <form id="loginForm">
-                                        <div class="form-group" id=gGroup>
-                                            <label for="GenreSelect"> <span><strong> Select Genre </strong></span></label>
-                                                <div class="dropdown">
-                                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Select Genre
-                                                    </button>
-                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                    <div id="idk"><a class="dropdown-item" data-genre="hip_hop" id="hip_hop" >Hip Hop</a></div>
-                                                    <a class="dropdown-item" data-genre="rock" id="rock" >Rock</a>
-                                                    <a class="dropdown-item" data-genre="Rap" id="rap" >Rap</a>
-                                                    <a class="dropdown-item" data-genre="country" id="country" >Country</a>
-                                                    <a class="dropdown-item" data-genre="electronic" id="electronic" >Electronic</a>
-                                                    <a class="dropdown-item" data-genre="trap" id="trap" >Trap</a>
-                                                    <a class="dropdown-item" data-genre="death_metal" id="death_metal" >Death Metal</a>
-                                                    <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" >Classic Rock</a>
-                                                    <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" >Hair Metal</a>
-                                                    <a class="dropdown-item" data-genre="jazz" id="jazz" >Jazz</a>
-                                                    <a class="dropdown-item" data-genre="soul" id="soul" >Soul</a>
-                                                    <a class="dropdown-item" data-genre="reggae" id="reggae" >Reggae</a>
-                                                    <a class="dropdown-item" data-genre="ska" id="ska" >Ska</a>
-                                                </div>
-                                                <button id="start_game" type="button" class="btn btn-primary"><a href="/game">Start the Game</a></button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--end drop down-->
-
+            {{!-- heading --}}
+            <div id="header">
+                <a href="/" id="logo">Funker</a>
+            </div>
+            {{!-- end heading --}}
+            <br> {{!-- bootstrap grid --}}
+            <div class="row">
+                <div class="col-6">
+                    {{!-- Nav button to Game page --}}
+                    <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;"
+                        id="shadow">
+                        {{!-- gamepad icon --}}
+                        <i class="fas fa-gamepad" id="navhead"></i>
+                        {{!-- href to /game directory --}}
+                        <a href="/game" style="color: white; text-decoration: none;"> Game</a>
+                    </button>
                 </div>
-        </div>        
+                {{!-- End nav button --}}
+                <br> {{!-- bootstrap grid --}}
+                <div class="col-6">
+                    {{!-- nav button to github --}}
+                    <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px;"
+                        id="shadow">
+                        {{!-- github icon --}}
+                        <i class="fab fa-github" id="navhead"></i>
+                        {{!-- link to github --}}
+                        <a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> Github</a>
+                    </button>
+                    {{!-- end nav button --}}
+                </div>
+                {{!-- end col --}}
+            </div>
+            {{!-- end row --}}
+        </div>
+        {{!-- end container --}}
     </div>
+    {{!-- end jumbotron --}}
 </div>
+{{!-- end container --}} {{!-- Second container, Holds login and Highscores cards --}}
+<div class="container" style="background-color:#F4CC81; border-radius: 25px; height: 1000px; width: 800px;" id="shadow">
 
-{{!-- LINKING DEPENDENCIES --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#register").click(function(){
-           $( "#dom" ).replaceWith( $( "#side2" ));
-            });
-        });       
-    </script>
+
+
+    {{!-- MAIN CONTAINER FOR HIGHSCORES--}}
+    <div class="container" style="width: 700px; ">
+
+        {{!-- bootstrap grid --}}
+        <div class="row">
+            <div class="col-6" id="">
+
+                {{!-- HIGHSCORES CARD--}}
+                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                <div class="card-body" id="hsBox" style="">
+                    {{!-- container for highscores card/list --}}
+                    <div class="container">
+                        {{!-- heading --}}
+                        <h2 id="hsHead">
+                            {{!-- trophy icon --}}
+                            <i class="fas fa-trophy"></i>
+                            <span>
+                                <strong> High Scores </strong>
+                            </span>
+                        </h2>
+                        {{!-- end heading --}}
+                        <hr>
+                    </div>
+                    {{!-- end of container --}} {{!-- highscores list --}}
+                    <div class="list" style="background-color:#F4CC81;">
+                        {{!-- container for the list --}}
+                        <div class="container">
+                            {{!-- Player 1 --}}
+                            <div id="hs1">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 1 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 2 --}}
+                            <div id="hs2">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 2 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 3 --}}
+                            <div id="hs3">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 3 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 4 --}}
+                            <div id="hs4">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 4 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 5 --}}
+                            <div id="hs5">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 5 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 6 --}}
+                            <div id="hs6">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 6 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 7 --}}
+                            <div id="hs7">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 7 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 8 --}}
+                            <div id="hs8">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 8 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 9 --}}
+                            <div id="hs9">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 9 </span>
+                                </a>
+                            </div>
+                            {{!-- Player 10 --}}
+                            <div id="hs10">
+                                <a>
+                                    <span>
+                                        <strong> Player </strong> 10 </span>
+                                </a>
+                            </div>
+                            {{!-- end of players --}}
+                        </div>
+                        {{!-- end of container --}}
+                    </div>
+                    {{!-- end of list --}}
+                </div>
+                {{!-- end of card body --}}
+            </div>
+            {{!-- end of bootstrap col --}} {{!--SECOND CARD--}} {{!-- bootstrap col --}}
+            <div class="col-6" id="switch1" style="margin-top:40px; border-radius:25;">
+                {{!-- card for sign in --}}
+                <div class="card" id="shadow" style="background-color:#F4CC81;border-radius:25;">
+                    {{!-- card body --}}
+                    <div class="card-body" style="border-radius:0;">
+                        {{!-- container for the card --}}
+                        <div class="container" id="side1">
+
+                            {{!-- HEADING --}}
+                            <h2 id="infoHead">
+                                {{!-- icon --}}
+                                <i class="fas fa-lock"></i>
+                                <span>
+                                    <strong> Player Sign In </strong>
+                                </span>
+                            </h2>
+                            <hr> {{!-- Form to sign in --}}
+                            <form id="theForm">
+
+                                {{!-- USERNAME INPUT --}}
+                                <div class="form-group">
+                                    <label for="playerId">
+                                        <span>
+                                            <strong> Username </strong>
+                                        </span>
+                                    </label>
+                                    {{!-- label for input --}}
+                                    <input type="text" class="form-control" id="username_login" aria-describedby="username" placeholder="Enter User Name">
+                                </div>
+                                {{!-- END --}}
+                                <div id="dom">
+                                    {{!-- PASSWORD INPUT --}}
+                                    <div class="form-group">
+                                        <label for="Password">
+                                            <span>
+                                                <strong> Password </strong>
+                                            </span>
+                                        </label>
+                                        {{!-- label for input --}}
+                                        <input type="password" class="form-control" id="password_login" placeholder="Password">
+                                    </div>
+                                    {{!-- END --}} {{!-- LOGIN BUTTON --}}
+                                    <button type="button" id="login_btn" class="btn btn-lg btn-block switch" style=" background-color: #EE7F52 ;  color: white;">Login</button>
+
+                                    {{!-- POST NEW USER --}}
+                                    <button type="button" id="signup_btn" class="btn btn-lg btn-block switch" style=" background-color: #EE7F52; color: white;">Sign Up</button>
+                                </div>
+                                {{!-- End of dom container --}}
+                            </form>
+                            {{!-- End of form --}}
+                        </div>
+                        {{!-- end of container --}}
+                    </div>
+                    {{!-- end card body --}}
+                </div>
+                {{!-- end of card --}}
+            </div>
+            {{!-- end of bootstrap col--}}
+
+            <!--drop down hidden for now-->
+            {{!-- genre menu --}}
+            <div id="menu" class="card" style="background-color:#FBA15F">
+                {{!-- card body --}}
+                <div class="card-body">
+                    {{!-- bootstrap col-4 --}}
+                    <div class="container col-4" id="genreBox">
+                        {{!-- container --}}
+                        <div class="container" id="GsubBox">
+                            {{!-- heading --}}
+                            <h2 id="genreHead">
+                                <span>
+                                    <strong>Pick Your Favorite Genre </strong>
+                                </span>
+                            </h2>
+                            {{!-- end heading --}} {{!-- login form --}}
+                            <form id="loginForm">
+                                {{!-- div for form --}}
+                                <div class="form-group" id=gGroup>
+                                    {{!-- label --}}
+                                    <label for="GenreSelect">
+                                        <span>
+                                            <strong> Select Genre </strong>
+                                        </span>
+                                    </label>
+                                    {{!-- end label --}} {{!-- div genre dropdown --}}
+                                    <div class="dropdown">
+                                        {{!-- select genre button dropdown --}}
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="false">
+                                            Select Genre
+                                        </button>
+                                        {{!-- end button dropdown --}} {{!-- dropdown menu div --}}
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
+                                            <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
+                                            <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
+                                            <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
+                                            <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
+                                            <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
+                                            <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
+                                            <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
+                                            <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
+                                            <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
+                                            <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
+                                            <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
+                                            <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
+                                        </div>
+                                        {{!-- end dropdown menu div --}} {{!-- start game button --}}
+                                        <button id="start_game" type="button" class="btn btn-primary">Start the Game</button>
+                                    </div>
+                                    {{!-- end div genre dropdown --}}
+                                </div>
+                                {{!-- end div for form --}}
+                            </form>
+                            {{!-- end of form --}}
+                        </div>
+                        {{!-- end container --}}
+                    </div>
+                    {{!-- end bootstrap col --}}
+                </div>
+                {{!-- end card body --}}
+            </div>
+            {{!-- end card/ genre menu --}}
+            <!--end drop down-->
+        </div>
+        {{!-- end row --}}
+    </div>
+    {{!-- end main container for hs --}}
+</div>
+{{!-- end second container for hs card --}} {{!-- LINKING DEPENDENCIES --}}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/easing/EasePack.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/CSSPlugin.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        //on click function to replace a card
+        $("#register").click(function () {
+            //target id of dom and replace with a new card
+            $("#dom").replaceWith($("#side2"));
+        });
+    });       
+</script>
