@@ -244,4 +244,18 @@ body {
   }
 }
 
+/* .modal {
+  max-width: 800px !important;
+  height: 800px !important;
+  margin: auto auto;
+} */
+
+.modal-dialog,
+.modal-content {
+  height: 80%;
+  width: 800px;
+  margin: 0 20%;
+  margin-top: 100px;
+}
+
 /* END ANSWER STYLING */
