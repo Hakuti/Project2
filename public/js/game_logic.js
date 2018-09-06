@@ -165,7 +165,7 @@ $(document).ready(function() {
         console.log(livesLeft);
         if (livesLeft == 0) {
           console.log("You lost");
-          $(".modal").modal("show");
+          $("#finish_modal").modal("show");
 
           //$("#goingPost".on(""))
           //send data to server of your points and streaks

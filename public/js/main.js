@@ -33,7 +33,7 @@
   console.log("ran ");
   //the dropdown menu starts out hidden
    //the dropdown menu starts out hidden
-   $("#menu").hide();
+  /* $("#menu").hide();
    //on a button click the dropdown menu and start button are shown and the login/signup is hidden
    
    $(".switch").on("click",function(){
@@ -41,6 +41,6 @@
      $("#switch1").hide();
      $("#menu").show();   
      }
-   });
+   });*/
  
 })(jQuery);
