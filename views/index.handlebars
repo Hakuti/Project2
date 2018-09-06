@@ -13,25 +13,27 @@
             <div class="row">
                 <div class="col-6">
                     {{!-- Nav button to Game page --}}
-                    <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;"
+                                <a href="/game" style="color: white; text-decoration: none;"> 
+                                    <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px; float:right; margin-right: 20px;"
                         id="shadow">
                         {{!-- gamepad icon --}}
                         <i class="fas fa-gamepad" id="navhead"></i>
                         {{!-- href to /game directory --}}
-                        <a href="/game" style="color: white; text-decoration: none;"> Game</a>
-                    </button>
+                             Game
+                    </button></a>
                 </div>
                 {{!-- End nav button --}}
                 <br> {{!-- bootstrap grid --}}
                 <div class="col-6">
                     {{!-- nav button to github --}}
+                   <a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> 
                     <button type="button" class="btn btn-square" style="border-radius: 0; color:white; background-color:#EE7F52; width: 200px; height:50px;"
                         id="shadow">
                         {{!-- github icon --}}
                         <i class="fab fa-github" id="navhead"></i>
                         {{!-- link to github --}}
-                        <a href="https://github.com/Hakuti/Project2" style="color: white; text-decoration: none;"> Github</a>
-                    </button>
+                        Github
+                    </button></a>
                     {{!-- end nav button --}}
                 </div>
                 {{!-- end col --}}
@@ -210,77 +212,86 @@
                 </div>
                 {{!-- end of card --}}
             </div>
-            {{!-- end of bootstrap col--}}
-
-            <!--drop down hidden for now-->
-            {{!-- genre menu --}}
-            <div id="menu" class="card" style="background-color:#FBA15F">
-                {{!-- card body --}}
-                <div class="card-body">
-                    {{!-- bootstrap col-4 --}}
-                    <div class="container col-4" id="genreBox">
-                        {{!-- container --}}
-                        <div class="container" id="GsubBox">
-                            {{!-- heading --}}
-                            <h2 id="genreHead">
-                                <span>
-                                    <strong>Pick Your Favorite Genre </strong>
-                                </span>
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="container">
+                    <div class="card" style="width: 323px; float: right; margin-right: -18px; margin-top: -300px; background-color: #F4CC81;"
+                        id="shadow">
+                        <img class="card-img-top" src="holder.js/100x180/" alt="">
+                        <div class="card-body"      id="GsubBox">
+                            <h2 style="text-align:center;">
+                                <strong>
+                                    <i class="fas fa-music"></i> Choose Genre </strong>
                             </h2>
-                            {{!-- end heading --}} {{!-- login form --}}
-                            <form id="loginForm">
-                                {{!-- div for form --}}
-                                <div class="form-group" id=gGroup>
-                                    {{!-- label --}}
-                                    <label for="GenreSelect">
-                                        <span>
-                                            <strong> Select Genre </strong>
-                                        </span>
-                                    </label>
-                                    {{!-- end label --}} {{!-- div genre dropdown --}}
-                                    <div class="dropdown">
-                                        {{!-- select genre button dropdown --}}
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="false">
-                                            Select Genre
-                                        </button>
-                                        {{!-- end button dropdown --}} {{!-- dropdown menu div --}}
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
-                                            <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
-                                            <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
-                                            <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
-                                            <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
-                                            <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
-                                            <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
-                                            <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
-                                            <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
-                                            <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
-                                            <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
-                                            <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
-                                            <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
-                                        </div>
-                                        {{!-- end dropdown menu div --}} {{!-- start game button --}}
-                                        <button id="start_game" type="button" class="btn btn-primary"><a href="/game">Start Game</a></button>
+                            <hr>
+                            <!--drop down hidden for now-->
+                            {{!-- genre menu --}}
+                            <div id="menu" class="card" style="background-color: #F4CC81; border-color:  #F4CC81;">
+                                {{!-- card body --}}
+                            
+                                    {{!-- bootstrap col-4 --}}
+                                    <div id="genreBox">
+                                        {{!-- container --}} {{!-- end heading --}} {{!-- login form --}}
+                                        <form id="loginForm">
+                                            {{!-- div for form --}}
+                                            <div class="form-group" id="gGroup" style="text-align: center;">
+                                                {{!-- label --}}
+                                                <label for="GenreSelect" >
+                                                    <span>
+                                                        <strong > Select Your Favorite Genre </strong>
+                                                    </span>
+                                                </label>
+                                                {{!-- end label --}} {{!-- div genre dropdown --}}
+                                                <div class="dropdown">
+                                                    {{!-- select genre button dropdown --}}
+                                                    <button style="width: 200px; margin-left: 40px;"class="btn btn-large btn-block dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false">
+                                                        Select Genre
+                                                    </button>
+                                                    <br>
+                                                    {{!-- end button dropdown --}} {{!-- dropdown menu div --}}
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
+                                                        <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
+                                                        <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
+                                                        <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
+                                                        <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
+                                                        <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
+                                                        <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
+                                                        <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
+                                                        <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
+                                                        <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
+                                                        <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
+                                                        <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
+                                                        <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
+                                                    </div>
+                                                    {{!-- end dropdown menu div --}} {{!-- start game button --}}
+                                                    <button id="start_game" type="button" class="btn btn-square btn-large btn-block"  style="border-radius: 5; color:white; background-color:#EE7F52; width: 200px; height:50px;  margin-left: 40px;"><a href="/game">Start the Game</a></button>
+                                                 <br>                                                   
+                                                </div>
+                                                {{!-- end div genre dropdown --}}
+                                            </div>
+                                            {{!-- end div for form --}}
+                                        </form>
+                                        {{!-- end of form --}}
                                     </div>
-                                    {{!-- end div genre dropdown --}}
+                                    {{!-- end container --}}
                                 </div>
-                                {{!-- end div for form --}}
-                            </form>
-                            {{!-- end of form --}}
+                                {{!-- end bootstrap col --}}
+                            </div>
+                            {{!-- end card body --}}
                         </div>
-                        {{!-- end container --}}
+                        {{!-- end card/ genre menu --}}
+                        <!--end drop down-->
                     </div>
-                    {{!-- end bootstrap col --}}
                 </div>
-                {{!-- end card body --}}
             </div>
-            {{!-- end card/ genre menu --}}
-            <!--end drop down-->
         </div>
-        {{!-- end row --}}
+        {{!-- end of bootstrap col--}}
     </div>
-    {{!-- end main container for hs --}}
+    {{!-- end row --}}
+</div>
+{{!-- end main container for hs --}}
 </div>
 {{!-- end second container for hs card --}} {{!-- LINKING DEPENDENCIES --}}
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
