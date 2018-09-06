@@ -287,3 +287,9 @@ function change(sourceUrl) {
 //     .find("i")
 //     .text(arrayThis[i]);
 // }
+
+
+$(document).ready(function(){
+  $("#start_modal").modal("show");
+});
+
