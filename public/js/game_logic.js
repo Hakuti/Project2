@@ -1,4 +1,11 @@
 $(document).ready(function() {
+
+  
+  $("#start_modal").modal("show");
+
+  $("#launch_game").on("click", function(){
+
+  
   let nextQuestionCounter = 0;
   let livesLeft = 3;
   let priorHighStreak = 0;
@@ -169,6 +176,9 @@ $(document).ready(function() {
         }
       }
     });
+
+  });
+
   });
 
   function resetInterval() {
@@ -289,7 +299,6 @@ function change(sourceUrl) {
 // }
 
 
-$(document).ready(function(){
-  $("#start_modal").modal("show");
-});
+
+
 
