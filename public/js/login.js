@@ -38,7 +38,9 @@ $(document).ready(function() {
 
     $(".dropdown-item").on("click",function(){
         var genre = $(this).attr("data-genre");
-        console.log(genre);
+        var genreTitle = $(this).eq(0).text();
+        console.log(genreTitle);
+        $("#dropdownMenu2").text(genreTitle);
         //now lets pass this data somewhere that matters
         //when the start button
         $("#start_game").on("click", function(){

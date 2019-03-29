@@ -1,5 +1,9 @@
+
 $(document).ready(function() {
+ 
   $("#start_modal").modal("show");
+  
+  // console.log(genreSelected);
 
   $("#launch_game").on("click", function() {
     let nextQuestionCounter = 0;
@@ -40,7 +44,7 @@ $(document).ready(function() {
       }
     });
 
-    $.get("/api/game/pop").then(function(data) {
+    $.get("/api/game/"+ localStorage.getItem("genre") ).then(function(data) {
       var randomData = takeDataArtistData(data);
 
       var tempArray = [];

@@ -57,7 +57,7 @@
             <div class="col-6" id="">
 
                 {{!-- HIGHSCORES CARD--}}
-                <img class="card-img-top" src="holder.js/100x180/" alt="">
+                {{!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> --}}
                 <div class="card-body" id="hsBox" style="">
                     {{!-- container for highscores card/list --}}
                     <div class="container">
@@ -217,7 +217,7 @@
                 <div class="container">
                     <div class="card" style="width: 323px; float: right; margin-right: -18px; margin-top: -300px; background-color: #F4CC81;"
                         id="shadow">
-                        <img class="card-img-top" src="holder.js/100x180/" alt="">
+                        {{!-- <img class="card-img-top" src="holder.js/100x180/" alt=""> --}}
                         <div class="card-body"      id="GsubBox">
                             <h2 style="text-align:center;">
                                 <strong>
@@ -251,19 +251,22 @@
                                                     <br>
                                                     {{!-- end button dropdown --}} {{!-- dropdown menu div --}}
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                        <a class="dropdown-item" data-genre="hip_hop" id="hip_hop" href="#">Hip Hop</a>
-                                                        <a class="dropdown-item" data-genre="rock" id="rock" href="#">Rock</a>
-                                                        <a class="dropdown-item" data-genre="rap" id="rap" href="#">Rap</a>
-                                                        <a class="dropdown-item" data-genre="country" id="country" href="#">Country</a>
-                                                        <a class="dropdown-item" data-genre="electronic" id="electronic" href="#">Electronic</a>
-                                                        <a class="dropdown-item" data-genre="trap" id="trap" href="#">Trap</a>
-                                                        <a class="dropdown-item" data-genre="death_metal" id="death_metal" href="#">Death Metal</a>
-                                                        <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" href="#">Classic Rock</a>
-                                                        <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" href="#">Hair Metal</a>
-                                                        <a class="dropdown-item" data-genre="jazz" id="jazz" href="#">Jazz</a>
-                                                        <a class="dropdown-item" data-genre="soul" id="soul" href="#">Soul</a>
-                                                        <a class="dropdown-item" data-genre="reggae" id="reggae" href="#">Reggae</a>
-                                                        <a class="dropdown-item" data-genre="ska" id="ska" href="#">Ska</a>
+                                                        
+                                                        {{!-- <a class="dropdown-item" data-genre="hip_hop" id="hip_hop">Hip Hop</a> --}}
+                                                        <a class="dropdown-item" data-genre="rock" id="rock" >Rock</a>
+                                                        <a class="dropdown-item" data-genre="rap" id="rap" >Rap</a>
+                                                        <a class="dropdown-item" data-genre="country" id="country" >Country</a>
+                                                        {{!-- <a class="dropdown-item" data-genre="electronic" id="electronic" >Electronic</a>
+                                                        <a class="dropdown-item" data-genre="trap" id="trap" >Trap</a>
+                                                        <a class="dropdown-item" data-genre="death_metal" id="death_metal" >Death Metal</a> --}}
+                                                        {{!-- <a class="dropdown-item" data-genre="classic_rock" id="classic_rock" >Classic Rock</a> --}}
+                                                        {{!-- <a class="dropdown-item" data-genre="hair_metal" id="hair_metal" >Hair Metal</a>
+                                                        <a class="dropdown-item" data-genre="jazz" id="jazz" >Jazz</a> --}}
+                                                        <a class="dropdown-item" data-genre="soul" id="soul" >Soul</a>
+                                                        {{!-- <a class="dropdown-item" data-genre="reggae" id="reggae" >Reggae</a>
+                                                        <a class="dropdown-item" data-genre="ska" id="ska" >Ska</a> --}}
+                                                        <a class="dropdown-item" data-genre="pop" id="pop" >Pop</a>
+
                                                     </div>
                                                     {{!-- end dropdown menu div --}} {{!-- start game button --}}
                                                     <button id="start_game" type="button" class="btn btn-square btn-large btn-block"  style="border-radius: 5; color:white; background-color:#EE7F52; width: 200px; height:50px;  margin-left: 40px;"><a href="/game">Start the Game</a></button>
