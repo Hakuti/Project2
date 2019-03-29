@@ -1,7 +1,8 @@
 $(document).ready(function() {
   // Getting references to our form and inputs
-  var usernameInput = $("input#username_login");
-  var passwordInput = $("input#password_login");
+  var usernameInput = $("#username_login");
+  var passwordInput = $("#password_login");
+  
 
   // When the form is submitted, we validate there's an username and password entered
   $("#login_btn").on("click", function() {
@@ -26,7 +27,20 @@ $(document).ready(function() {
       username: username,
       password: password
     }).then(function(data) {
-      window.location.replace(data);
+      console.log(data);
+      console.log("reached");
+      $("#theForm").empty();
+      $("#theForm").append(
+        "<div class='d-flex justify-content-center'><h3 class='align-center'>Riseki</h3></div>"+
+        "<div class='d-flex flex-column mt-3'>"+
+        "<div class='d-flex justify-content-center mb-0'><p>Current Score<p></div>"+
+        "<div class='d-flex justify-content-center mt-0 mb-5'><h3>10000<h3></div>"
+
+        +"</div>"
+        );
+    
+      //window.location.replace(data);
+     
       // If there's an error, log the error
     }).catch(function(err) {
       console.log(err);
