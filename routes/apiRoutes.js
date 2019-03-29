@@ -2,6 +2,7 @@ var db = require("../models");
 var myspotify = require("../public/js/spotifySearch.js");
 //passport is the npm package we use for user authentication
 var passport = require("../config/passport");
+const Op = db.Sequelize.Op;
 
 module.exports = function(app) {
   // Get all examples
@@ -18,11 +19,13 @@ module.exports = function(app) {
     db.artists
       .findAll({
         where: {
-          genre: {
-            $like: "%" + req.params.genre
-          },
+           genre: {
+            [Op.like]:'%' + req.params.genre
+          //   // [Op.like]: '%pop'
+          //   // Op.like: "%" + req.params.genre
+           },
           song_url: {
-            $ne: null
+            [Op.ne]: null
           }
         }
       })
@@ -76,12 +79,13 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
+    console.log(req.body.username);
     db.User.create({
       username: req.body.username,
       password: req.body.password
     })
       .then(function() {
-        res.redirect(307, "/api/login");
+        // res.redirect(307, "/api/login");
       })
       .catch(function(err) {
         console.log(err);
