@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPTmnEvJwt77nWF_gazXXZtT6tlZcOUkPekWpk4exvUY2TDj1IZw" alt="Markdownify" width="200"></a>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://github.com/Hakuti/Project2/blob/master/public/images/funker.png" alt="Markdownify" width="200"></a>
   <br>
   NAME TBD
   <br>
