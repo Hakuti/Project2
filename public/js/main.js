@@ -51,6 +51,9 @@
    });*/
   $.get("/api/highscore/").then(function(data) {
     console.log(data);
+
+  
+    
     console.log(
       $("#hs" + 1)
         .eq(0)
@@ -62,7 +65,7 @@
       $("#hs" + i)
         .eq(0)
         .find("strong")
-        .text(data[i].username + " " + data[i].scores);
+        .text(data[i-1].username + " " + data[i-1].scores);
     }
   });
 })(jQuery);

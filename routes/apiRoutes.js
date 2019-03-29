@@ -43,7 +43,8 @@ module.exports = function(app) {
   app.get("/api/highscore", function(req, res) {
     //console.log(req.body.genre);
     db.User.findAll({
-      order: ["scores"]
+      // order: ["scores"]
+      order: db.Sequelize.literal('(scores) DESC')
     }).then(result => {
       res.json(result);
     });
