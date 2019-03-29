@@ -2,7 +2,7 @@
   <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://github.com/Hakuti/Project2/blob/master/public/images/funker.png" alt="Markdownify" width="500"></a>
   <br>
-  NAME TBD
+  Funker
   <br>
 </h1>
 
