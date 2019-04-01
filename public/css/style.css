@@ -256,6 +256,24 @@ body {
   width: 800px;
   margin: 0 20%;
   margin-top: 100px;
+  
+}
+
+.modal-content {  
+  background-color: #f4cc81;
+}
+
+.modal-container-outer {
+  background: white;
+  /* margin: 0 auto; */
+  
+  width: 600px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
 }
 
 /* END ANSWER STYLING */
+

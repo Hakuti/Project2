@@ -239,18 +239,26 @@
     {{!-- end container --}} {{!-- start game modal --}}
     <div id="start_modal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="row justify-content-center">
+        <div class="modal-content d-flex">
+          <div style="width: 100%; height: 100%; background-color:#F4CC81" class="d-flex flex-column align-items-center justify-content-center"> 
+
+          {{!-- <div class="" style="background-color: blue; display: inline; width: 150px; height: 50px;"> --}}
+            <h2 class="text-center">Answer the music trivia! The more questions you get correct the more points you score</h2>
+            <h5 class="text-center">The faster you answer questions correctly, the more points also accumlated</h5>
+            <h5 class="text-center mt-3 mb-5">You have three lives, then it's game over!</h5>
+          <button style="background-color:#EE7F52; color: white; border-radius: 0;" id="launch_game" type="button" class="btn btn-square mt-5" data-dismiss="modal">Start Game</button>
+          {{!-- </div> --}}
+
+          </div>
+          {{!-- <div class="row justify-content-center">
             <div id="modal_p" class="col-8">
-              <h3>Guess what song is playing as fast as you can! The faster you guess, the more points you will earn. The
-                Song will only play ten seconds, and there is no replay!</h3>
-              <p>Choose wisely though, incorrect guesses will cost you a life and you only get 3 lives.</p>
+            
             </div>
           </div>
           <!--next row-->
           <div id="modal_r" class="row justify-content-center">
-            <button id="launch_game" type="button" class="btn btn-secondary" data-dismiss="modal">Start Game</button>
-          </div>
+            <button style="background-color:#EE7F52; color: white; border-radius: 0;" id="launch_game" type="button" class="btn btn-square" data-dismiss="modal">Start Game</button>
+          </div> --}}
         </div>
       </div>
     </div>
@@ -258,6 +266,8 @@
     <div id="finish_modal" class="modal" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+
+          
           <div class="row justify-content-center">
             <div id="modal_p" class="col-8">
               <p>Your score </p>
