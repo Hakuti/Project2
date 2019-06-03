@@ -11,7 +11,7 @@ var db = {};
 if (config.use_env_variable) {
   // var sequelize = new Sequelize(process.env[config.use_env_variable]);
   var sequelize = new Sequelize(
-    `${process.env.PROD_DATANASE}`,
+    `${process.env.PROD_DATABASE}`,
     `${process.env.PROD_USERNAME}`,
     `${process.env.PROD_PASSWORD}`,
     
