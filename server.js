@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var passport = require("./config/passport");
+require('dotenv').config();
 var db = require("./models");
 var signale = require('signale');
 //require("./public/js/spotifySearch.js")
